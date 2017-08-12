@@ -1,0 +1,67 @@
+@import './config';
+
+a {
+  text-decoration: none;
+  font-family: $font-family;
+  cursor: pointer;
+}
+
+a,
+.primary {
+  color: $color-link;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-link-hover;
+    text-decoration: $link-hover-active-decoration;
+  }
+
+  &:visited {
+    color: $color-link-visited;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+.link-dark,
+.role-dark {
+  color: $color-dark-link;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-dark-link-hover;
+    text-decoration: $dark-link-hover-active-decoration;
+  }
+
+  &:visited {
+    color: $color-dark-link-visited;
+
+    &:hover {
+      color: $color-dark-link-hover;
+    }
+  }
+}
+
+.link-light,
+.role-light {
+  color: $color-light-link;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-light-link-hover;
+    text-decoration: $light-link-hover-active-decoration;
+  }
+
+  &:visited {
+    color: $color-light-link-visited;
+
+    &:hover {
+      color: $color-light-link-hover;
+    }
+  }
+}

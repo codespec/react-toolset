@@ -1,0 +1,263 @@
+@import "mixins";
+
+$font-size-h1: (
+  font-size: 3rem,
+  line-height: 1.3
+) !default;
+
+$font-size-h2: (
+  font-size: 2.25rem,
+  line-height: 1.3
+) !default;
+
+$font-size-h3: (
+  font-size: 1.75rem,
+  line-height: 1.3
+) !default;
+
+$font-size-h4: (
+  font-size: 1.25rem,
+  line-height: 1.3
+) !default;
+
+$font-size-small: (
+  font-size: .75rem,
+  line-height: 1.3
+) !default;
+
+$font-size-body: (
+  font-size: 1rem,
+  line-height: 1.3
+) !default;
+
+$font-size-large: (
+  font-size: 1.25rem,
+  line-height: 1.3
+) !default;
+
+$font-weight-h1: bold !default;
+$font-weight-h2: bold !default;
+$font-weight-h3: bold !default;
+$font-weight-h4: bold !default;
+$font-weight-body: normal !default;
+
+$letter-spacing-h1: normal !default;
+$letter-spacing-h2: normal !default;
+$letter-spacing-h3: normal !default;
+$letter-spacing-h4: normal !default;
+
+$text-transform-header: none !default;
+
+$font-family: sans-serif !default;
+
+// ----- colors -----
+$color-sunshine-yellow: #FFF176 !default;
+$color-sky-blue: #81D4FA !default;
+$color-orchid-purple: #7B1FA2 !default;
+$color-plum-purple: #880E4F !default;
+$color-slate-green: #43A047 !default;
+$color-light-blue: #03A9F4 !default;
+$color-light-slate-green: lighten($color-slate-green, 35%) !default;
+$color-dark-grass-green: #2E7D32 !default;
+$color-bg-transparent-black: rgba(0, 0, 0, .8) !default;
+
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-gray-dark: #33334b !default;
+$color-gray: #666678 !default;
+$color-gray-medium: #9999a5 !default;
+$color-gray-light: #e6e6e9 !default;
+$color-gray-off-white: #f0f0f0 !default;
+
+$color-ok: #2b9305 !default;
+$color-ok-highlight: #ebf8e6 !default;
+$color-warning: #ff8c55 !default;
+$color-warning-highlight: #fff2ee !default;
+$color-error: #d92610 !default;
+$color-error-highlight: #fbe9e7 !default;
+$color-info: #0098ee !default;
+$color-info-highlight: #cceafb !default;
+
+$color-body: $color-gray-dark !default;
+
+$color-link: #0098ee !default;
+$color-link-hover: #32b8ff !default;
+$color-link-visited: $color-link !default;
+
+$color-light-link: $color-white !default;
+$color-light-link-hover: $color-white !default;
+$color-light-link-visited: $color-white !default;
+
+$color-dark-link: $color-body !default;
+$color-dark-link-hover: $color-gray-medium !default;
+$color-dark-link-visited: $color-body !default;
+
+// ----- z-indicies -----
+$z-indicies: (
+  dropdown-menu: 20,
+  dropdown-button-is-open: 21,
+  dropdown-menu-helper: 22,
+  mask: 40,
+  nav-drawer: 50,
+  lightbox: 60,
+  processing-message: 70,
+  transient-message: 80
+) !default;
+
+// ----- spacing -----
+$unit: 6px !default;
+$spacing-hor: 2 * $unit !default;
+$spacing-vert: 2 * $unit !default;
+$spacing: $spacing-vert $spacing-hor !default;
+
+// ----- shadows -----
+$shadow: 0 1px 1px 0 rgba(0, 0, 0, .15) !default;
+$shadow-strong: 0 2px 3px 0 rgba(0, 0, 0, .2) !default;
+
+// ----- borders -----
+$border-width: 1px !default;
+$border-color-dark: $color-gray-dark !default;
+$border-color-medium: $color-gray-medium !default;
+$border-color-light: $color-gray-light !default;
+$border-radius-none: 0 !default;
+$border-radius-small: 0.5 * $unit !default;
+$border-radius-medium: $unit !default;
+$border-radius-large: 1.5 * $unit !default;
+
+// ----- layouts -----
+$container-width: 1020px !default;
+$grid-gutter: 2 * $unit !default;
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1025px
+) !default;
+
+// ----- icons -----
+$icon-small: 2 * $unit !default;
+$icon-medium: 3 * $unit !default;
+$icon-large: 4 * $unit !default;
+$icon-xlarge: 5 * $unit !default;
+
+// ----- links -----
+$link-hover-active-decoration: none !default;
+$light-link-hover-active-decoration: underline !default;
+$dark-link-hover-active-decoration: underline !default;
+
+// ----- buttons -----
+$button-padding-vert: 2 * $unit !default;
+$button-padding-hor: 3 * $unit !default;
+$button-text-size-map: $font-size-body !default;
+
+$button-small-padding-vert: $unit !default;
+$button-small-padding-hor: 3 * $unit !default;
+$button-small-text-size-map: $font-size-body !default;
+
+$button-large-padding-vert: 2 * $unit !default;
+$button-large-padding-hor: 6 * $unit !default;
+$button-large-text-size-map: $font-size-large !default;
+
+$button-border-width: $border-width !default;
+$button-border-radius: $border-radius-small !default;
+$button-font-weight: normal !default;
+$button-disabled-opacity: .5 !default;
+
+$button-text-transform: none !default;
+$button-background: $color-gray-light !default;
+$button-border: $color-gray-medium !default;
+$button-text: $color-gray-dark !default;
+$button-hover-background: $color-gray-off-white !default;
+$button-hover-border: $color-gray-medium !default;
+$button-hover-text: $color-gray-dark !default;
+$button-active-background: $color-gray-dark !default;
+$button-active-border: $color-gray-dark !default;
+$button-active-text: $color-white !default;
+$button-disabled-background: $color-gray-light !default;
+$button-disabled-border: $color-gray-medium !default;
+$button-disabled-text: $color-gray-dark !default;
+
+$button-primary-text-transform: none !default;
+$button-primary-background: $color-link !default;
+$button-primary-border: $color-link !default;
+$button-primary-text: $color-white !default;
+$button-primary-hover-background: $color-link-hover !default;
+$button-primary-hover-border: $color-link !default;
+$button-primary-hover-text: $color-white !default;
+$button-primary-active-background: $color-link !default;
+$button-primary-active-border: $color-link !default;
+$button-primary-active-text: $color-white !default;
+$button-primary-disabled-background: $color-link !default;
+$button-primary-disabled-border: $color-link !default;
+$button-primary-disabled-text: $color-white !default;
+
+$button-secondary-text-transform: none !default;
+$button-secondary-background: $color-white !default;
+$button-secondary-border: $color-link !default;
+$button-secondary-text: $color-link !default;
+$button-secondary-hover-background: $color-white !default;
+$button-secondary-hover-border: $color-link-hover !default;
+$button-secondary-hover-text: $color-link-hover !default;
+$button-secondary-active-background: $color-gray-light !default;
+$button-secondary-active-border: $color-link !default;
+$button-secondary-active-text: $color-link !default;
+$button-secondary-disabled-background: $color-white !default;
+$button-secondary-disabled-border: $color-link !default;
+$button-secondary-disabled-text: $color-link !default;
+
+// ----- form elements -----
+$label-bottom-spacing: 0 !default;
+$label-color: $color-body !default;
+$label-size-map: $font-size-body !default;
+$label-font-weight: bold !default;
+$label-optional-color: $color-body !default;
+$label-optional-font-size: map-get($font-size-body, font-size) !default;
+
+$form-field-background: $color-white !default;
+$form-field-height: 7 * $unit !default;
+$form-field-padding-hor: $spacing-hor !default;
+$form-field-padding-vert: $spacing-vert !default;
+$form-field-border: $border-width solid $border-color-medium !default;
+$form-field-border-radius: $border-radius-small !default;
+$form-field-shadow: $shadow-strong !default;
+$form-field-text-color: $color-gray-dark !default;
+$form-field-text-size-map: $font-size-body !default;
+$text-area-text-size-map: $font-size-body !default;
+
+$form-field-small-height: 6 * $unit !default;
+$form-field-small-line-height: 3 * $unit !default;
+
+$form-field-disabled-background: $color-gray-off-white !default;
+$form-field-disabled-text-color: $color-gray-light !default;
+$form-field-disabled-border: $border-width solid $border-color-light !default;
+
+// ----- checkbox (used with Checkbox component) -----
+$checkbox-dimension-small: 3 * $unit !default;
+$checkbox-dimension-medium: 4 * $unit !default;
+
+$checkbox-border: $border-width solid $color-gray-medium !default;
+$checkbox-checked-background: $color-link !default;
+$checkbox-unchecked-background: $color-white !default;
+$checkbox-checkmark-color: $color-white !default;
+
+$checkbox-disabled-border: $border-width solid $color-gray-light !default;
+$checkbox-disabled-checked-background: inherit !default;
+$checkbox-disabled-checkmark-color: $color-gray-medium !default;
+$checkbox-disabled-text: $color-gray-medium !default;
+
+$checkbox-error-border: $border-width solid $color-error !default;
+
+// ----- radio button -----
+$radio-dimension: 4 * $unit !default;
+
+// ----- styled radios/checkboxes -----
+$styled-choice-spacing: $unit !default;
+
+$styled-choice-background: $color-gray-light !default;
+$styled-choice-border: $border-width solid #bebebe !default;
+
+$styled-choice-selected-background: $color-gray-dark !default;
+$styled-choice-selected-border: $border-width solid $styled-choice-selected-background !default;
+$styled-choice-selected-text-color: $color-white !default;
+
+$styled-choice-control-color: #bebebe !default;
+$styled-choice-control-checked-color: $color-white !default;

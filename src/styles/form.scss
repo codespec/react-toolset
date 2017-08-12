@@ -1,0 +1,157 @@
+:local {
+  @import "./config";
+
+  // Overwrites native select component style so it looks visually consistent between Safari and other browsers
+  select {
+    background: url('./selectArrows.svg') no-repeat;
+    appearance: none;
+    background-position: 99%;
+    background-size: contain;
+    &.input {
+      padding-right: 4 * $unit;
+    }
+  }
+  select::-ms-expand {
+      display: none;
+  }
+
+  // Form Layouts
+  .form-fields-container {
+    margin-bottom: $unit * 3;
+    vertical-align: top;
+    position: relative;
+  }
+
+  // Form Field Labels
+  .label {
+    display: block;
+    margin-bottom: $label-bottom-spacing;
+    color: $label-color;
+    @include fontSize($label-size-map);
+    font-weight: $label-font-weight;
+  }
+
+  .label-note {
+    font-weight: normal;
+  }
+
+  /* calculate padding based on height, line height and border */
+  @mixin verticalPadding($height, $lineHeight, $border) {
+    padding-top: ($height - $lineHeight - (2 * $border)) / 2;
+    padding-bottom: ($height - $lineHeight - (2 * $border)) / 2;
+  }
+
+  // Input Field
+  .input {
+    background-color: $form-field-background;
+    border: $form-field-border;
+    border-radius: $form-field-border-radius;
+    color: $form-field-text-color;
+    display: block;
+    height: $form-field-height;
+    padding-right: $form-field-padding-hor;
+    padding-left: $form-field-padding-hor;
+    @include verticalPadding($form-field-height, map-get($form-field-text-size-map, line-height), $border-width);
+    width: 100%;
+
+    @include fontSize($form-field-text-size-map);
+    &.is-small {
+      height: $form-field-small-height;
+      @include verticalPadding($form-field-small-height, $form-field-small-line-height, $border-width);
+      line-height: $form-field-small-line-height;
+    }
+
+    &[disabled] {
+      background-color: $form-field-disabled-background;
+      border: $form-field-disabled-border;
+      color: $form-field-disabled-text-color;
+
+      &::placeholder {
+        color: $color-gray-light;
+      }
+
+      &::selection {
+        background-color: transparent;
+        color: inherit;
+      }
+    }
+
+    &[readonly] {
+      padding-left: 0;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      color: $color-body;
+    }
+
+    &::placeholder {
+      color: $color-gray-medium;
+    }
+
+    &.is-error {
+      border-color: $color-error;
+      color: $color-error;
+    }
+    &:focus {
+      outline: none;
+      border-color: $color-link;
+    }
+  }
+
+  textarea.input {
+    height: auto;
+  }
+
+  .text-error {
+    color: $color-error;
+  }
+
+  .label-optional {
+    color: $label-optional-color;
+    font-size: $label-optional-font-size;
+  }
+
+  .field-error-message {
+    display: block;
+    position: absolute;
+    top: 100%;
+    color: $color-error;
+    @include fontSize($font-size-small);
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+
+    .input-addon {
+      background-color: $form-field-background;
+      border: $form-field-border;
+      border-radius: $form-field-border-radius;
+      box-shadow: $form-field-shadow;
+      color: $form-field-text-color;
+      display: table-cell;
+      padding: $form-field-padding-vert $form-field-padding-hor;
+      @include fontSize($form-field-text-size-map);
+      text-align: center;
+      width: 1%;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+
+    .input-addon:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    .input-group {
+      margin-bottom: 0;
+
+      input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}

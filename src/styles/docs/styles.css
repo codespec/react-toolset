@@ -1,0 +1,65 @@
+/* layouts Grid Column */
+.customColumnClass {
+  border: 1px solid blue;
+}
+
+.customRowClass {
+  border: 2px dotted red;
+}
+
+/* Override style of react-styleguidist */
+p code[class^="code-"],
+li code[class^="code-"] {
+  background-color: #E8EAF6 !important;
+  color: #3F51B5;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 2px 4px;
+}
+
+h1 > a,
+h1 > a:visited,
+h1 > .primary:visited {
+  color: #FDD835 !important;
+}
+
+h1 > a:hover,
+h1 > a:visited:hover {
+  color: #F9A825 !important;
+  text-decoration: none !important;
+}
+
+[class^="sidebar"] {
+  background-color: #FDD835 !important;
+  border-color: #F9A825 !important;
+  width: 270px !important;
+}
+
+[class^="sidebar"] a,
+[class^="sidebar"] a:hover,
+[class^="sidebar"] a:visited {
+  color: #333 !important;
+}
+
+[class^="sidebar"] > div {
+  border-color: #F9A825 !important;
+}
+
+[class^="sidebar"] h1 {
+  color: #333;
+  font-size: 47px;
+}
+
+[class*="hasSidebar"] {
+  padding-left: 270px !important;
+}
+
+@media (max-width: 600px) {
+  [class^="sidebar"] {
+    width: 100% !important;
+  }
+
+  [class*="hasSidebar"] {
+    padding-left: 0 !important;
+  }
+}

@@ -1,0 +1,35 @@
+%clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+%hide-accessble {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin fontSize($fontMap) {
+  font-size: map-get($fontMap, font-size);
+  line-height: map-get($fontMap, line-height);
+}
+
+%text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%align-vertical-middle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

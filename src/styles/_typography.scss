@@ -1,0 +1,65 @@
+:global {
+  @import './config';
+  @import './links';
+
+  // Headers
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    color: inherit;
+    text-transform: $text-transform-header;
+  }
+
+  h1 {
+    @include fontSize($font-size-h1);
+    font-weight: $font-weight-h1;
+    letter-spacing: $letter-spacing-h1;
+  }
+
+  h2 {
+    @include fontSize($font-size-h2);
+    font-weight: $font-weight-h2;
+    letter-spacing: $letter-spacing-h2;
+  }
+
+  h3 {
+    @include fontSize($font-size-h3);
+    font-weight: $font-weight-h3;
+    letter-spacing: $letter-spacing-h3;
+  }
+
+  h4 {
+    @include fontSize($font-size-h4);
+    font-weight: $font-weight-h4;
+    letter-spacing: $letter-spacing-h4;
+  }
+
+  // Paragraph Text
+
+  p {
+    margin: 0 0 (2 * $unit);
+  }
+
+  .paragraph-loose {
+    margin: 0 0 (3 * $unit);
+    @include fontSize($font-size-large);
+  }
+
+  // Text Treatments
+
+  .text-subtle {
+    color: $color-gray-medium;
+  }
+
+  .text-footnote {
+    color: $color-gray-medium;
+    @include fontSize($font-size-small);
+  }
+
+  .text-error {
+    color: $color-error;
+  }
+}
