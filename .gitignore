@@ -57,9 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-# production
-/build
-
 # misc
 .DS_Store
 .env.local
