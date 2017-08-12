@@ -1,5 +1,5 @@
 {
-  "name": "react-toolset",
+  "name": "@codespec/react-toolset",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -94,5 +94,17 @@
     "node-sass": "^4.5.3",
     "react-styleguidist": "^6.0.10",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "description": "Set of React components",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codespec/react-toolset.git"
+  },
+  "author": "Codespec Eng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codespec/react-toolset/issues"
+  },
+  "homepage": "https://github.com/codespec/react-toolset/"
 }
