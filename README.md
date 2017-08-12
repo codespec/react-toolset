@@ -1,6 +1,4 @@
-![Bumblebee][logo]
-
-Bumblebee is list of react components which are being used in baapchef project.
+react-toolset is list of react components which can be adopted easily. It is using [classnames] module for conditional class name injection.
 
 ## Developing / viewing examples
 ```
@@ -10,7 +8,7 @@ Bumblebee is list of react components which are being used in baapchef project.
 
 ## Component files structure
 ```
-bumblebee/
+react-toolset/
   src/
     components/
       elements/
@@ -71,7 +69,7 @@ When creating compoennt scss:
 
 ### Component API conventions
 
-#### Keep the data flow outside
+#### Keep the data flow outside of component
 
 Make your component consume and return data without holding it in internal state. Do not make assumptions on how data is being handled outside of component. Let's say you have toaster message on top of your page. Straight forward but inappropriate solution might be following:
 
@@ -79,12 +77,10 @@ Make your component consume and return data without holding it in internal state
 :local {
   .Toaster {
     position: relative;
-    background: rgba(0, 0, 0, .1);
+    ...
   }
   .Toaster__close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    ...
     &:before {
       content: 'x';
     }
@@ -98,19 +94,19 @@ and JS somewhat like this
 export default class Toaster extends Component {
   state: { isOpen: true }
 
-  _onClose = () => this.setState({ isOpen: !this.state.isOpen })
+  onClose = () => this.setState({ isOpen: !this.state.isOpen })
 
   render () {
-    const { content, extCls = {} } = this.props
+    const { content, cls } = this.props
     const { isOpen } = this.state
 
     if (!isOpen) return null
 
     return (
-      <div className={cls('Toaster', extCls.root)}>
+      <div className={cx('Toaster', cls.root)}>
         <div>
           {content}
-          <span className={cls('Toaster__close-btn', extCls.close)} onClick={this._onClose}></span>
+          <span className={cx('Toaster__close-btn', cls.close)} onClick={this.onClose}></span>
         </div>
       </div>
     )
@@ -126,10 +122,10 @@ This approach has number of problems:
 But if you leave this decisions to the App itself, then component would be simplified down to this
 
 ```jsx
-const Toaster = ({ content, onClose, extCls = {} }) => (
-  <div className={cls('Toaster', extCls.root)}>
+const Toaster = ({ content, onClose, cls = {} }) => (
+  <div className={cx('Toaster', cls.root)}>
     {content}
-    <span className={cls('Toaster__close-btn', extCls.close)} onClick={onClose} />
+    <span className={cx('Toaster__close-btn', cls.close)} onClick={onClose} />
   </div>
 )
 ```
@@ -146,9 +142,9 @@ Let's say you make an Icon component and want it to be clickable, or ideally acc
 
 ```jsx
 const Icon = ({ name, classNames, ...otherProps }) => {
-  <span className={cls('Icon', `Icon-${name}`, className)} ...otherProps />
+  <span className={cx('Icon', `Icon-${name}`, className)} ...otherProps />
 }
 ```
 
 
-[logo]: https://upload.wikimedia.org/wikipedia/en/3/37/BumblebeeHIRES.jpg
+[classnames]: https://github.com/JedWatson/classnames
