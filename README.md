@@ -66,7 +66,7 @@ export default ComponentName
 
 When creating compoennt scss:
 - import the config scss fiel to ensure access to standardized style variables
-- user BEM naming convention for class names, `:local` scope lets you not worry about names uniqueness
+- use BEM naming convention for class names, `:local` scope lets you not worry about names uniqueness
 - keep your scss as flat as possible to ensure that additional styles passed into your component through `className` or `cls` props will be applied
 
 ### Component API conventions
