@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   title: 'Bumblebee',
   webpackConfig: require('./config/webpack.config.dev.js'),
-  styleguideDir: path.resolve(`${__dirname}/docs`),
+  styleguideDir: path.resolve(__dirname),
   highlightTheme: 'material',
   require: [path.join(__dirname, 'src/styles/docs/styles.css')],
   getComponentPathLine(componentPath) {
