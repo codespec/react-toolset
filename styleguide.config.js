@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  title: 'Bumblebee',
+  title: 'React Toolset',
   webpackConfig: require('./config/webpack.config.dev.js'),
   styleguideDir: path.resolve(__dirname),
   highlightTheme: 'material',
