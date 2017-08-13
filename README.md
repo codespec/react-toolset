@@ -17,7 +17,7 @@ $ yarn add @codespec/react-toolset
 ### How to use component
 
 ```jsx
-import Button from '@codespec/react-toolset/src/components/elements/Button'
+import Button from '@codespec/react-toolset'
 ```
 
 [classnames]: https://github.com/JedWatson/classnames
