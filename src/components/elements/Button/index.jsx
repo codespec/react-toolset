@@ -5,12 +5,11 @@ import '../../../styles/bumblebee.scss'
 import { button as buttonCls } from '../../../styles'
 const cls = cx.bind(buttonCls)
 
-const Button = ({role, size, tag, isStretched, isSelected, link, elmId, className, children, ...props}) => {
+const Button = ({role, size, tag, isStretched, isSelected, link, className, children, ...props}) => {
   const tagName = link ? 'a' : (tag || 'button')
 
   return React.createElement(tagName, {
     href: (link || null),
-    'data-elm-id': elmId,
     className: cls('Button', `Button-${role}`, `Button-${size}`, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className),
     ...props
   }, children)
