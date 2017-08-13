@@ -1,7 +1,7 @@
 ### Usage
 
 ```jsx static
-import { Column, Row } from 'bumblebee/src/components/layouts/Grid'
+import { Column, Row } from '@codespec/react-toolset'
 ```
 
 ### Description

@@ -1,7 +1,7 @@
 ### Usage
 
 ```jsx static
-import Input from 'bumblebee/src/components/elements/Input'
+import { Input } from '@codespec/react-toolset'
 ```
 
 ### Description

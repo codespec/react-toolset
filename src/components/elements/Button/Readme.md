@@ -1,7 +1,7 @@
 ### Usage
 
 ```jsx static
-import Button from 'bumblebee/src/components/elements/Button'
+import { Button } from '@codespec/react-toolset'
 ```
 
 ### Description
