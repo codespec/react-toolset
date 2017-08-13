@@ -1,9 +1,9 @@
 react-toolset is list of react components which can be adopted easily. It is using [classnames] module for conditional class name injection.
 
 ## Developing / viewing examples
-```
-> npm install
-> npm run docs
+```sh
+$ npm install
+$ npm run docs
 ```
 
 ## Component files structure
