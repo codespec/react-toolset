@@ -1,6 +1,6 @@
 {
   "name": "@codespec/react-toolset",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
