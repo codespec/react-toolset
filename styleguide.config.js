@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   title: 'React Toolset',
   webpackConfig: require('./config/webpack.config.dev.js'),
-  styleguideDir: path.resolve(__dirname),
+  styleguideDir: path.join(__dirname, 'docs'),
   highlightTheme: 'material',
   require: [path.join(__dirname, 'src/styles/docs/styles.css')],
   getComponentPathLine(componentPath) {
