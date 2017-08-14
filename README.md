@@ -21,7 +21,7 @@ Since this react-toolset library is not compiling production package, you need t
 1. Install SCSS related loaders
 
   ```sh
-  $ yarn add --dev sass-loader node-sass
+  $ yarn add --dev sass-loader node-sass autoprefixer
   ```
 
 2. Set up Webpack configuration
@@ -43,8 +43,19 @@ Since this react-toolset library is not compiling production package, you need t
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          {
+            loader: 'css-loader',
+            options: {
+              modules:true,
+              localIdentName: '[local]-[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              plugins: () => [require('autoprefixer')]
+            }
+          }
         ]
       },
     ]
