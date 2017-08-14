@@ -18,13 +18,7 @@ $ yarn add @codespec/react-toolset
 
 Since this react-toolset library is not compiling production package, you need to set up more things.
 
-1. Install SCSS related loaders
-
-  ```sh
-  $ yarn add --dev sass-loader node-sass autoprefixer
-  ```
-
-2. Set up Webpack configuration
+1. Set up Webpack configuration
   ```js
   // Add this loaders in your webpack.config.js
   // You should not exclude node_modules directory from it.
@@ -61,8 +55,7 @@ Since this react-toolset library is not compiling production package, you need t
     ]
   }
   ```
-
-3. Import individual component from your application
+2. Import individual component from your application
 
   ```jsx
   import Button from '@codespec/react-toolset'
