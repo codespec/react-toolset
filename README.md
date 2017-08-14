@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/@codespec/react-toolset/v/npm.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
+[![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 [![npm](https://img.shields.io/npm/dt/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 
 react-toolset is list of react components which can be adopted easily. It is using [classnames] module for conditional class name injection.
