@@ -12,7 +12,7 @@ $ yarn add @codespec/react-toolset
 
 ### Documentation
 
-- [https://codespec.github.io/react-toolset/](https://codespec.github.io/react-toolset/)
+- [https://codespec.github.io/react-toolset/docs/](https://codespec.github.io/react-toolset/docs/)
 
 ### How to use component
 
