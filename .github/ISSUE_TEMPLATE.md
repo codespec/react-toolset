@@ -1,6 +1,7 @@
 ## For bug report, please follow the instruction below
 
 Make sure these requested information is reviewed and answered before submitting your issue -- thank you!
+Once you submit the issue, please add `bug` label on it.
 
 #### checklist
 - [] Are you using react?
@@ -21,6 +22,7 @@ Make sure these requested information is reviewed and answered before submitting
 ## For feature request, please follow the instruction below
 
 Please take a look at below questions and answer before submitting your idea -- thank you!
+Once you submit the issue, please add `feature request` label on it.
 
 - What the feature for?
 - What use cases we can have?
