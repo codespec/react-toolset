@@ -4,6 +4,22 @@ Many of the column properties accept a "size".  A "size" is always a number betw
 
 ```jsx
 <div>
+  <strong>1 row is divided by 12 columns basic. Please try decreasing browser width to see the how it looks like of below examples</strong>
+  <Row className='customRowClass'>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+    <Column small={12} medium={6} large={1} className='customColumnClass'><p>1 large</p></Column>
+  </Row>
+  <br />
   <strong>If just small is set, small, medium, and large displays will have the same column configuration</strong>
   <Row>
     <Column small={4} className='customColumnClass'>
