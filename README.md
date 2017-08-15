@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
-[![npm](https://img.shields.io/npm/dt/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
+[![npm](https://img.shields.io/npm/dm/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 
 react-toolset is list of react components which can be adopted easily. It is using [classnames] module for conditional class name injection.
 
@@ -61,7 +61,7 @@ Since this react-toolset library is not compiling production package, you need t
 2. Import individual component from your application
 
   ```jsx
-  import Button from '@codespec/react-toolset'
+  import { Button } from '@codespec/react-toolset'
   ```
 
 [classnames]: https://github.com/JedWatson/classnames
