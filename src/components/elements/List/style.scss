@@ -1,0 +1,80 @@
+:local {
+  @import '../../../styles/config';
+
+  .List {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    > li {
+      margin-bottom: $list-padding-loose;
+    }
+  }
+
+  .List-instruction {
+    list-style-type: decimal;
+    list-style-position: inside;
+    counter-reset: li;
+
+    > li {
+      position: relative;
+      list-style: none;
+      padding: 0 0 2 * $unit 5 * $unit;
+
+      &::before {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 21px;
+        height: 21px;
+        border: 2px solid $color-body;
+        border-radius: 10000px;
+        color: $color-body;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: bold;
+        text-align: center;
+        content: counter(li);
+        counter-increment: li;
+      }
+    }
+  }
+
+  .List-bullet {
+    padding-left: 4 * $unit;
+    list-style: disc;
+
+    > li {
+      margin-bottom: $list-padding-loose;
+    }
+  }
+
+  .List-horizontal {
+    > li {
+      display: inline-block;
+      margin-right: $list-padding-loose;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .List-pipe {
+    > li {
+      display: inline-block;
+      padding: 0 $list-padding-loose;
+      border-right: $border-width solid $color-body;
+      line-height: 14px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border-right: 0;
+      }
+    }
+  }
+}

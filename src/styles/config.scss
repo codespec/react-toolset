@@ -144,6 +144,10 @@ $link-hover-active-decoration: none !default;
 $light-link-hover-active-decoration: underline !default;
 $dark-link-hover-active-decoration: underline !default;
 
+// ----- lists -----
+$list-padding-loose: 1.5 * $unit !default;
+$list-padding-default: $unit !default;
+
 // ----- buttons -----
 $button-padding-vert: 2 * $unit !default;
 $button-padding-hor: 3 * $unit !default;
