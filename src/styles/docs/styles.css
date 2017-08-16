@@ -1,10 +1,14 @@
 /* layouts Grid Column */
-.customColumnClass {
-  border: 1px solid blue;
+.customColumnClass:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.customColumnClass:nth-child(even) {
+  background-color: #ccc;
 }
 
 .customRowClass {
-  border: 2px dotted red;
+  border: 1px solid #ddd;
 }
 
 /* Override style of react-styleguidist */
@@ -19,34 +23,43 @@ li code[class^="code-"] {
 
 h1 > a,
 h1 > a:visited,
-h1 > .primary:visited {
-  color: #FDD835 !important;
+h1 > .primary:visited,
+h2 > a,
+h2 > a:visited,
+h2 > .primary:visited {
+  color: #33334b !important;
 }
 
 h1 > a:hover,
-h1 > a:visited:hover {
-  color: #F9A825 !important;
+h1 > a:visited:hover,
+h2 > a:hover,
+h2 > a:visited:hover {
+  color: #33334b !important;
+}
+
+a:hover,
+a:visited:hover {
   text-decoration: none !important;
 }
 
 [class^="sidebar"] {
-  background-color: #FDD835 !important;
-  border-color: #F9A825 !important;
+  background-color: #29BF12 !important;
+  border-color: #29BF12 !important;
   width: 270px !important;
 }
 
 [class^="sidebar"] a,
 [class^="sidebar"] a:hover,
 [class^="sidebar"] a:visited {
-  color: #333 !important;
+  color: #fff !important;
 }
 
 [class^="sidebar"] > div {
-  border-color: #F9A825 !important;
+  border-color: #29BF12 !important;
 }
 
 [class^="sidebar"] h1 {
-  color: #333;
+  color: #fff;
   font-size: 37px;
   font-weight: bold;
 }
