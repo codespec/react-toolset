@@ -23,6 +23,12 @@ const Column = (props) => {
     if (props.offset && (typeof props.offset[size] !== 'undefined')) {
       columnClasses.push(cls[size + '-offset-' + props.offset[size]])
     }
+    if (props.push && (typeof props.push[size] !== 'undefined')) {
+      columnClasses.push(cls[size + '-push-' + props.push[size]])
+    }
+    if (props.pull && (typeof props.pull[size] !== 'undefined')) {
+      columnClasses.push(cls[size + '-pull-' + props.pull[size]])
+    }
     if (props.end) {
       columnClasses.push(cls['end'])
     }
@@ -47,6 +53,20 @@ Column.propTypes = {
   large: PropTypes.number,
   /** A mapping of column offsets on various screen sizes. "Offset"ing a column adds space to the left of the column */
   offset: PropTypes.shape({
+    small: PropTypes.number,
+    medium: PropTypes.number,
+    large: PropTypes.number,
+    print: PropTypes.number
+  }),
+  /** A mapping of push columns to right */
+  push: PropTypes.shape({
+    small: PropTypes.number,
+    medium: PropTypes.number,
+    large: PropTypes.number,
+    print: PropTypes.number
+  }),
+  /** A mapping of pull columns to left */
+  pull: PropTypes.shape({
     small: PropTypes.number,
     medium: PropTypes.number,
     large: PropTypes.number,
