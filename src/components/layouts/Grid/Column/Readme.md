@@ -89,6 +89,51 @@ Many of the column properties accept a "size".  A "size" is always a number betw
 </div>
 ```
 
+### Push/Pull Column
+
+By using push and pull on your columns, you can reverse the placement of columns based on screen size. For example, if you want to show column A to the right of column B on desktop browser, and show column A above column B on mobile, you can achieve this by push/pull.
+
+```jsx
+<div>
+  <strong>Simple push/pull for all display sizes (A, B indicates source order)</strong>
+  <Row>
+    <Column small={4} push={{small: 8}} className='customColumnClass'>
+      <p>A (4 small, push 8)</p>
+    </Column>
+    <Column small={8} pull={{small: 4}} className='customColumnClass'>
+      <p>B (8 small, pull 4)</p>
+    </Column>
+  </Row>
+  <br />
+  <strong>Simple push/pull for medium up (A, B indicates source order)</strong>
+  <Row>
+    <Column medium={4} print={4} push={{medium: 8, print: 8}} className='customColumnClass'>
+      <p>A (12 small, 4 medium, push 8 medium)</p>
+    </Column>
+    <Column medium={8} print={8} pull={{medium: 4, print: 4}} className='customColumnClass'>
+      <p>B (12 small, 8 medium, pull 4 medium)</p>
+    </Column>
+  </Row>
+  <br />
+  <strong>Complex layout involving nested grid and push/pull for large (A, B, C indicates source order)</strong>
+  <Row className='customRowClass'>
+    <Column large={8} push={{large: 4}} className='customColumnClass'>
+      <Row className='customRowClass'>
+        <Column large={6} push={{large: 6}} className='customColumnClass'>
+          A (nested col pushed at large)
+        </Column>
+        <Column large={6} pull={{large: 6}} className='customColumnClass'>
+          B (nested col pulled at large)
+        </Column>
+      </Row>
+    </Column>
+    <Column large={4} pull={{large: 8}} className='customColumnClass'>
+      C (non-nested col pull at large)
+    </Column>
+  </Row>
+</div>
+```
+
 ### Offset Column
 
 Typically, the column values within each of your rows will add up to 12 (e.g. 6 + 6 or 4 + 4 + 4). If your layout instead includes 'missing' columns, you may use offsets to nudge columns into position while having blank space for 'missing' columns.
