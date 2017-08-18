@@ -16,6 +16,10 @@ module.exports = {
       content: './src/Readme.md'
     },
     {
+      name: 'Icons',
+      components: './src/components/icons/**/index.jsx'
+    },
+    {
       name: 'Elements',
       components: './src/components/elements/**/index.jsx'
     },
