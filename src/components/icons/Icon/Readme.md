@@ -1,4 +1,4 @@
-react-toolset is using [react-icons] for its icon sets.
+react-toolset is using <a href="https://github.com/gorangajic/react-icons" target="_blank">react-icons</a> for its icon sets.
 
 ### Usage
 
@@ -9,10 +9,10 @@ import { Icon } from '@codespec/react-toolset'
 ### List of Icons
 
 You can find out the list of icons and each icon names from here:
-- [Font Awesome]
-- [Material Design]
-- [Typicons]
-- [Github Octicons]
+- <a href="https://gorangajic.github.io/react-icons/fa.html" target="_blank">Font Awesome</a>
+- <a href="https://gorangajic.github.io/react-icons/md.html" target="_blank">Material Design</a>
+- <a href="https://gorangajic.github.io/react-icons/ti.html" target="_blank">Typicons</a>
+- <a href="https://gorangajic.github.io/react-icons/go.html" target="_blank">Github Octicons</a>
 
 ### Size of Icons
 ```jsx
@@ -35,8 +35,3 @@ You can find out the list of icons and each icon names from here:
   <Icon type='typicons' name='TiFilter' size='xlarge' color='#2196F3' />
 </div>
 ```
-
-[react-icons]: https://github.com/gorangajic/react-icons
-[Font Awesome]: https://gorangajic.github.io/react-icons/fa.html
-[Typicons]: https://gorangajic.github.io/react-icons/ti.html
-[Github Octicons]: https://gorangajic.github.io/react-icons/go.html
