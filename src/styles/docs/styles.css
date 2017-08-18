@@ -11,6 +11,11 @@
   border: 1px solid #ddd;
 }
 
+/* layouts Icon */
+.iconExample {
+  margin-right: 6px;
+}
+
 /* Override style of react-styleguidist */
 p code[class^="code-"],
 li code[class^="code-"] {
