@@ -50,7 +50,7 @@ a:visited:hover {
 [class^="sidebar"] {
   background-color: #29BF12 !important;
   border-color: #29BF12 !important;
-  width: 270px !important;
+  width: 300px !important;
 }
 
 [class^="sidebar"] a,
@@ -65,12 +65,22 @@ a:visited:hover {
 
 [class^="sidebar"] h1 {
   color: #fff;
-  font-size: 37px;
-  font-weight: bold;
+  font-size: 34px;
+  line-height: 60px;
+}
+
+[class^="sidebar"] h1::before {
+  background-image: url("../../images/toolset-white.png");
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  display: block;
+  float: left;
+  content: "";
 }
 
 [class*="hasSidebar"] {
-  padding-left: 270px !important;
+  padding-left: 300px !important;
 }
 
 @media (max-width: 600px) {

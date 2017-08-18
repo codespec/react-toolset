@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 [![npm](https://img.shields.io/npm/dm/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 
-react-toolset is list of react components which can be adopted easily. It is using <a href="https://github.com/JedWatson/classnames" target="_blank">classnames</a> module for conditional class name injection.
+<img src="src/images/toolset-green.png" />react-toolset is list of react components which can be adopted easily. It is using <a href="https://github.com/JedWatson/classnames" target="_blank">classnames</a> module for conditional class name injection.
 
 ### Install
 
