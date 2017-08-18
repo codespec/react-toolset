@@ -2,7 +2,7 @@
 
 <img src="src/images/toolset-green.png" alt="React Toolset" width="380" />
 
-## React Toolset
+<h1 style="margin-top: 5px;">React Toolset</h1>
 
 [![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 [![npm](https://img.shields.io/npm/dm/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
