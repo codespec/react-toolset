@@ -3,7 +3,7 @@ react-toolset is using [react-icons] for its icon sets.
 ### Usage
 
 ```jsx static
-import Icon from '@codespec/react-toolset'
+import { Icon } from '@codespec/react-toolset'
 ```
 
 ### List of Icons
