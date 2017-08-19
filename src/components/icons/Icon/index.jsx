@@ -11,12 +11,6 @@ import cx from 'classnames/bind'
 const cls = cx.bind()
 
 const Icon = ({type, name, size, color, className, ...props}) => {
-  const sizeMap = {
-    small: 12,
-    medium: 18,
-    large: 24,
-    xlarge: 32
-  }
   const fontLibMap = {
     fontAwesome: FontAwesome,
     materialDesign: MaterialDesign,
@@ -25,7 +19,7 @@ const Icon = ({type, name, size, color, className, ...props}) => {
   }
 
   return React.createElement(fontLibMap[type][name], {
-    size: sizeMap[size],
+    size,
     color,
     className: cls(className),
     ...props
@@ -37,8 +31,8 @@ Icon.propTypes = {
   type: PropTypes.oneOf(['fontAwesome', 'materialDesign', 'typicons', 'githubOcticons']),
   /** Icon name from the icon set */
   name: PropTypes.string.isRequired,
-  /** Size of icon */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+  /** Size of icon with pixel unit */
+  size: PropTypes.number,
   /** Hex code of icon color */
   color: PropTypes.string,
   className: PropTypes.string
@@ -47,7 +41,7 @@ Icon.propTypes = {
 Icon.defaultProps = {
   type: 'fontAwesome',
   name: 'FaCheck',
-  size: 'medium',
+  size: 18,
   color: '#333'
 }
 

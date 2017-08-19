@@ -16,49 +16,26 @@ You can find out the list of icons and each icon names from here:
 
 ### Size of Icons
 
-There are 4 different sizes for icons. `iconExample` class is used for the documentation purpose.
+Set any integer value for size of pixel. `iconExample` class is used for the documentation purpose.
 
 ```jsx
 <div>
-  <Icon className='iconExample' type='fontAwesome' name='FaCcAmex' size='small' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDinersClub' size='small' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDiscover' size='small' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcJcb' size='small' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcMastercard' size='small' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcVisa' size='small' />
-  <Icon type='fontAwesome' name='FaCcPaypal' size='small' />
-  <br />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcAmex' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDinersClub' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDiscover' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcJcb' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcMastercard' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcVisa' />
-  <Icon type='fontAwesome' name='FaCcPaypal' />
-  <br />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcAmex' size='large' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDinersClub' size='large' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDiscover' size='large' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcJcb' size='large' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcMastercard' size='large' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcVisa' size='large' />
-  <Icon type='fontAwesome' name='FaCcPaypal' size='large' />
-  <br />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcAmex' size='xlarge' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDinersClub' size='xlarge' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcDiscover' size='xlarge' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcJcb' size='xlarge' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcMastercard' size='xlarge' />
-  <Icon className='iconExample' type='fontAwesome' name='FaCcVisa' size='xlarge' />
-  <Icon type='fontAwesome' name='FaCcPaypal' size='xlarge' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={12} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={24} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={32} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={45} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={56} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={64} className='iconExample' />
+  <Icon type='fontAwesome' name='FaCheckCircle' size={82} />
 </div>
 ```
 
 ### Custom Colors
 ```jsx
 <div>
-  <Icon type='materialDesign' name='MdAccountCircle' size='xlarge' color='#29BF12' />
-  <Icon type='githubOcticons' name='GoAlert' size='xlarge' color='#F44336' />
-  <Icon type='typicons' name='TiFilter' size='xlarge' color='#2196F3' />
+  <Icon type='materialDesign' name='MdAccountCircle' size={45} color='#29BF12' />
+  <Icon type='githubOcticons' name='GoAlert' size={45} color='#F44336' />
+  <Icon type='typicons' name='TiFilter' size={45} color='#2196F3' />
 </div>
 ```
