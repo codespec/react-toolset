@@ -1,6 +1,6 @@
 <div align="center" markdown="1">
 
-<img src="src/images/toolset-green.png" alt="React Toolset" width="380" />
+<img src="src/images/toolset-logo-dark.png" alt="React Toolset" width="380" />
 
 <h1 style="margin-top: 5px;">React Toolset</h1>
 

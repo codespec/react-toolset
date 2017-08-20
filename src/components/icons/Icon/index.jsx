@@ -42,7 +42,7 @@ Icon.defaultProps = {
   type: 'fontAwesome',
   name: 'FaCheck',
   size: 18,
-  color: '#333'
+  color: '#00142b'
 }
 
 export default Icon
