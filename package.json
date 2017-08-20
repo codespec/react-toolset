@@ -1,6 +1,6 @@
 {
   "name": "@codespec/react-toolset",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "keywords": [
     "React",
     "Components",
@@ -21,6 +21,7 @@
     "react-dev-utils": "^3.1.0",
     "react-dom": "^15.6.1",
     "react-error-overlay": "^1.0.10",
+    "react-icons": "^2.2.5",
     "sass-loader": "^6.0.6",
     "style-loader": "0.18.2"
   },

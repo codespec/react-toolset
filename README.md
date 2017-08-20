@@ -1,7 +1,15 @@
+<div align="center" markdown="1">
+
+<img src="src/images/toolset-logo-dark.png" alt="React Toolset" width="380" />
+
+<h1 style="margin-top: 5px;">React Toolset</h1>
+
 [![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 [![npm](https://img.shields.io/npm/dm/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 
-react-toolset is list of react components which can be adopted easily. It is using [classnames] module for conditional class name injection.
+Independent set of React UI Components for your application.
+
+</div>
 
 ### Install
 
@@ -15,7 +23,7 @@ $ yarn add @codespec/react-toolset
 
 ### Documentation
 
-- [https://codespec.github.io/react-toolset/docs/](https://codespec.github.io/react-toolset/docs/)
+- <a href="https://codespec.github.io/react-toolset/docs/" target="_blank">https://codespec.github.io/react-toolset/docs/</a>
 
 ### How to use
 
@@ -63,5 +71,3 @@ Since this react-toolset library is not compiling production package, you need t
   ```jsx
   import { Button } from '@codespec/react-toolset'
   ```
-
-[classnames]: https://github.com/JedWatson/classnames

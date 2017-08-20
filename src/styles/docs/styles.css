@@ -11,6 +11,11 @@
   border: 1px solid #ddd;
 }
 
+/* layouts Icon */
+.iconExample {
+  margin-right: 6px;
+}
+
 /* Override style of react-styleguidist */
 p code[class^="code-"],
 li code[class^="code-"] {
@@ -27,14 +32,14 @@ h1 > .primary:visited,
 h2 > a,
 h2 > a:visited,
 h2 > .primary:visited {
-  color: #33334b !important;
+  color: #00142b !important;
 }
 
 h1 > a:hover,
 h1 > a:visited:hover,
 h2 > a:hover,
 h2 > a:visited:hover {
-  color: #33334b !important;
+  color: rgba(0, 20, 43, .8) !important;
 }
 
 a:hover,
@@ -43,29 +48,46 @@ a:visited:hover {
 }
 
 [class^="sidebar"] {
-  background-color: #29BF12 !important;
-  border-color: #29BF12 !important;
-  width: 270px !important;
+  background-color: #00142b !important;
+  border-color: #00142b !important;
+  width: 300px !important;
 }
 
 [class^="sidebar"] a,
-[class^="sidebar"] a:hover,
 [class^="sidebar"] a:visited {
   color: #fff !important;
 }
 
+[class^="sidebar"] a:hover {
+  color: rgba(255, 255, 255, .5) !important;
+}
+
 [class^="sidebar"] > div {
-  border-color: #29BF12 !important;
+  border-color: #00142b !important;
 }
 
 [class^="sidebar"] h1 {
   color: #fff;
-  font-size: 37px;
-  font-weight: bold;
+  font-size: 34px;
+  line-height: 60px;
+}
+
+[class^="sidebar"] h1::before {
+  background-image: url("../../images/toolset-logo-light.png");
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  display: block;
+  float: left;
+  content: "";
 }
 
 [class*="hasSidebar"] {
-  padding-left: 270px !important;
+  padding-left: 300px !important;
+}
+
+footer {
+  display: none !important;
 }
 
 @media (max-width: 600px) {
