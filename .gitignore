@@ -63,3 +63,6 @@ typings/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# snapshots
+__snapshots__

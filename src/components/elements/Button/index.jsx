@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
-import '../../../styles/bumblebee.scss'
+import '../../../styles/react-toolset.scss'
 import { button as buttonCls } from '../../../styles'
 const cls = cx.bind(buttonCls)
 
