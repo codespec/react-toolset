@@ -295,16 +295,23 @@ $form-field-disabled-border: $border-width solid $border-color-light !default;
 // ----- checkbox (used with Checkbox component) -----
 $checkbox-dimension-small: 3 * $unit !default;
 $checkbox-dimension-medium: 4 * $unit !default;
+$checkbox-dimension-large: 6 * $unit !default;
+$checkbox-dimension-xlarge: 8 * $unit !default;
 
-$checkbox-border: $border-width solid $color-gray-medium !default;
-$checkbox-checked-background: $color-link !default;
+$checkbox-border: $border-width solid $color-primary !default;
+$checkbox-checked-background: $color-white !default;
 $checkbox-unchecked-background: $color-white !default;
-$checkbox-checkmark-color: $color-white !default;
+$checkbox-checkmark-color: $color-primary !default;
 
 $checkbox-disabled-border: $border-width solid $color-gray-light !default;
 $checkbox-disabled-checked-background: inherit !default;
 $checkbox-disabled-checkmark-color: $color-gray-medium !default;
 $checkbox-disabled-text: $color-gray-medium !default;
+
+$checkbox-primary-border: $border-width solid $color-primary !default;
+$checkbox-primary-checked-background: $color-primary !default;
+$checkbox-primary-unchecked-background: $color-white !default;
+$checkbox-primary-checkmark-color: $color-white !default;
 
 $checkbox-error-border: $border-width solid $color-error !default;
 
@@ -323,3 +330,9 @@ $styled-choice-selected-text-color: $color-white !default;
 
 $styled-choice-control-color: #bebebe !default;
 $styled-choice-control-checked-color: $color-white !default;
+
+// ----- icon dimension -----
+$icon-dimension-small: 14px !default;
+$icon-dimension-medium: 20px !default;
+$icon-dimension-large: 32px !default;
+$icon-dimension-xlarge: 45px !default;

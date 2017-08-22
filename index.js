@@ -6,6 +6,7 @@ import Button from './src/components/elements/Button'
 import Input from './src/components/elements/Input'
 import List from './src/components/elements/List'
 import ListItem from './src/components/elements/List/ListItem'
+import Checkbox from './src/components/elements/Checkbox'
 
 // Layouts
 import Column from './src/components/layouts/Grid/Column'
@@ -18,7 +19,8 @@ export {
   Input,
   List,
   ListItem,
+  Checkbox,
 
   Column,
-  Row
+  Row,
 }
