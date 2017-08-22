@@ -4,6 +4,7 @@
 
 <h1 style="margin-top: 5px;">React Toolset</h1>
 
+[![Build Status](https://travis-ci.org/codespec/react-toolset.svg?branch=master)](https://travis-ci.org/codespec/react-toolset)
 [![npm](https://img.shields.io/npm/v/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 [![npm](https://img.shields.io/npm/dm/@codespec/react-toolset.svg)](https://www.npmjs.com/package/@codespec/react-toolset)
 

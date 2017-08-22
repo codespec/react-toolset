@@ -1,18 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
-import '../../../styles/bumblebee.scss'
+import '../../../styles/react-toolset.scss'
 import { button as buttonCls } from '../../../styles'
+
 const cls = cx.bind(buttonCls)
 
-const Button = ({role, size, tag, isStretched, isSelected, link, isFlat, className, children, ...props}) => {
+const Button = ({
+  role,
+  size,
+  tag,
+  isStretched,
+  isSelected,
+  link,
+  isFlat,
+  className,
+  children,
+  ...props
+}) => {
   const tagName = link ? 'a' : (tag || 'button')
   const style = isFlat ? 'flat' : 'rounded'
 
   return React.createElement(tagName, {
     href: (link || null),
     className: cls('Button', `Button-${role}`, `Button-${size}`, `Button-is-${style}`, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className),
-    ...props
+    ...props,
   }, children)
 }
 
@@ -31,7 +43,7 @@ Button.propTypes = {
   /** Name of extra class to apply to the root element */
   className: PropTypes.string,
   /** Button label. */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 Button.defaultProps = {
@@ -39,7 +51,7 @@ Button.defaultProps = {
   size: 'medium',
   tag: 'button',
   isStretched: false,
-  isFlat: false
+  isFlat: false,
 }
 
 export default Button

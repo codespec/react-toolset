@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import style from '../style.scss'
+
 const cls = cx.bind(style)
 
-const Column = ({className, onClick, children, ...props}) => {
+const Column = ({ className, onClick, children, ...props }) => {
   const ColumnSizes = [
     'small',
     'medium',
     'large',
-    'print'
+    'print',
   ]
 
   const columnClasses = [cls('column'), className]
@@ -49,32 +50,34 @@ Column.propTypes = {
   medium: PropTypes.number,
   /** Number of columns when the browser width is greater than 768px */
   large: PropTypes.number,
+  /* eslint-disable max-len */
   /** A mapping of column offsets on various screen sizes. "Offset"ing a column adds space to the left of the column */
+  /* eslint-enable max-len */
   offset: PropTypes.shape({
     small: PropTypes.number,
     medium: PropTypes.number,
     large: PropTypes.number,
-    print: PropTypes.number
+    print: PropTypes.number,
   }),
   /** A mapping of push columns to right */
   push: PropTypes.shape({
     small: PropTypes.number,
     medium: PropTypes.number,
     large: PropTypes.number,
-    print: PropTypes.number
+    print: PropTypes.number,
   }),
   /** A mapping of pull columns to left */
   pull: PropTypes.shape({
     small: PropTypes.number,
     medium: PropTypes.number,
     large: PropTypes.number,
-    print: PropTypes.number
+    print: PropTypes.number,
   }),
   /** Override last column's float-right behavior for incomplete row */
   end: PropTypes.bool,
   /** Mouse click event handler */
   onClick: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 /* eslint-enable react/no-unused-prop-types */
 
