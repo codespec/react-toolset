@@ -4,12 +4,16 @@
     display: inline-block;
     border-width: $button-border-width;
     border-style: solid;
-    border-radius: $button-border-radius;
     font-weight: $button-font-weight;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transition: all 0.3s ease;
+    }
 
     &[disabled] {
       &,
@@ -51,6 +55,14 @@
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .Button-is-flat {
+    border-radius: 0;
+  }
+
+  .Button-is-rounded {
+    border-radius: $button-border-radius;
   }
 
   .Button-default {
@@ -194,12 +206,197 @@
 
     &[disabled] {
       &,
+      &:hover,
       &:focus,
       &:active,
       &:visited {
         background-color: $button-secondary-disabled-background;
         border-color: $button-secondary-disabled-border;
         color: $button-secondary-disabled-text;
+      }
+    }
+  }
+
+  .Button-success {
+    text-transform: $button-success-text-transform;
+
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited,
+    &[disabled]:hover,
+    &[disalbed]:active {
+      color: $button-success-text;
+    }
+
+    &,
+    &:focus {
+      background-color: $button-success-background;
+      border-color: $button-success-border;
+    }
+
+    &:hover,
+    &:hover:visited {
+      background-color: $button-success-hover-background;
+      border-color: $button-success-hover-border;
+      color: $button-success-hover-text;
+    }
+
+    &:active,
+    &:active:hover,
+    &:active:visited {
+      background-color: $button-success-active-background;
+      border-color: $button-success-active-border;
+      color: $button-success-active-text;
+    }
+
+    &[disabled] {
+      &,
+      &:focus,
+      &:active,
+      &:visited {
+        background-color: $button-success-disabled-background;
+        border-color: $button-success-disabled-border;
+        color: $button-success-disabled-text;
+      }
+    }
+  }
+
+  .Button-warning {
+    text-transform: $button-warning-text-transform;
+
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited,
+    &[disabled]:hover,
+    &[disalbed]:active {
+      color: $button-warning-text;
+    }
+
+    &,
+    &:focus {
+      background-color: $button-warning-background;
+      border-color: $button-warning-border;
+    }
+
+    &:hover,
+    &:hover:visited {
+      background-color: $button-warning-hover-background;
+      border-color: $button-warning-hover-border;
+      color: $button-warning-hover-text;
+    }
+
+    &:active,
+    &:active:hover,
+    &:active:visited {
+      background-color: $button-warning-active-background;
+      border-color: $button-warning-active-border;
+      color: $button-warning-active-text;
+    }
+
+    &[disabled] {
+      &,
+      &:focus,
+      &:active,
+      &:visited {
+        background-color: $button-warning-disabled-background;
+        border-color: $button-warning-disabled-border;
+        color: $button-warning-disabled-text;
+      }
+    }
+  }
+
+  .Button-error {
+    text-transform: $button-error-text-transform;
+
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited,
+    &[disabled]:hover,
+    &[disalbed]:active {
+      color: $button-error-text;
+    }
+
+    &,
+    &:focus {
+      background-color: $button-error-background;
+      border-color: $button-error-border;
+    }
+
+    &:hover,
+    &:hover:visited {
+      background-color: $button-error-hover-background;
+      border-color: $button-error-hover-border;
+      color: $button-error-hover-text;
+    }
+
+    &:active,
+    &:active:hover,
+    &:active:visited {
+      background-color: $button-error-active-background;
+      border-color: $button-error-active-border;
+      color: $button-error-active-text;
+    }
+
+    &[disabled] {
+      &,
+      &:focus,
+      &:active,
+      &:visited {
+        background-color: $button-error-disabled-background;
+        border-color: $button-error-disabled-border;
+        color: $button-error-disabled-text;
+      }
+    }
+  }
+
+  .Button-info {
+    text-transform: $button-info-text-transform;
+
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited,
+    &[disabled]:hover,
+    &[disalbed]:active {
+      color: $button-info-text;
+    }
+
+    &,
+    &:focus {
+      background-color: $button-info-background;
+      border-color: $button-info-border;
+    }
+
+    &:hover,
+    &:hover:visited {
+      background-color: $button-info-hover-background;
+      border-color: $button-info-hover-border;
+      color: $button-info-hover-text;
+    }
+
+    &:active,
+    &:active:hover,
+    &:active:visited {
+      background-color: $button-info-active-background;
+      border-color: $button-info-active-border;
+      color: $button-info-active-text;
+    }
+
+    &[disabled] {
+      &,
+      &:focus,
+      &:active,
+      &:visited {
+        background-color: $button-info-disabled-background;
+        border-color: $button-info-disabled-border;
+        color: $button-info-disabled-text;
       }
     }
   }

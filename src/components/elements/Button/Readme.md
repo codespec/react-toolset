@@ -10,7 +10,7 @@ import { Button } from '@codespec/react-toolset'
 
 ### Roles
 
-- Use `role` (string) to style the button with a standard style of `default`, `primary`, or `secondary` role
+- Use `role` (string) to style the button with a standard style of `default`, `primary`, `secondary`, `success`, `warning`, `error`, `info` role
 - Add the `disabled` attribute to make the button look and act disabled
 
 ```jsx
@@ -25,6 +25,48 @@ import { Button } from '@codespec/react-toolset'
   <br />
   <div>
     <Button role='secondary'>Secondary</Button> <Button role='secondary' disabled>Disabled Secondary</Button>
+  </div>
+  <br />
+  <div>
+    <Button role='success'>Success</Button> <Button role='success' disabled>Disabled Success</Button>
+  </div>
+  <br />
+  <div>
+    <Button role='warning'>Warning</Button> <Button role='warning' disabled>Disabled Warning</Button>
+  </div>
+  <br />
+  <div>
+    <Button role='error'>Error</Button> <Button role='error' disabled>Disabled Error</Button>
+  </div>
+  <br />
+  <div>
+    <Button role='info'>Info</Button> <Button role='info' disabled>Disabled Info</Button>
+  </div>
+</div>
+```
+
+### Button Styles
+
+Two types of button styles: flat, rounded.
+
+```jsx
+<div>
+  <div>
+    <Button isFlat={true} role='primary' className='buttonExample'>Primary</Button>
+    <Button isFlat={true} role='secondary' className='buttonExample'>Secondary</Button>
+    <Button isFlat={true} role='success' className='buttonExample'>Success</Button>
+    <Button isFlat={true} role='warning' className='buttonExample'>Warning</Button>
+    <Button isFlat={true} role='error' className='buttonExample'>Error</Button>
+    <Button isFlat={true} role='info'>Info</Button>
+  </div>
+  <br />
+  <div>
+    <Button role='primary' className='buttonExample'>Primary</Button>
+    <Button role='secondary' className='buttonExample'>Secondary</Button>
+    <Button role='success' className='buttonExample'>Success</Button>
+    <Button role='warning' className='buttonExample'>Warning</Button>
+    <Button role='error' className='buttonExample'>Error</Button>
+    <Button role='info'>Info</Button>
   </div>
 </div>
 ```
