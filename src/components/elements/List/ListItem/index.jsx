@@ -2,19 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import style from '../style.scss'
+
 const cls = cx.bind(style)
 
-const ListItem = ({className, children}) => (
+const ListItem = ({ className, children }) => (
   <li className={cls(className)}>{children}</li>
 )
 
 ListItem.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 ListItem.defaultProps = {
-  children: <div />
+  children: <div />,
 }
 
 export default ListItem

@@ -10,19 +10,19 @@ import cx from 'classnames/bind'
 
 const cls = cx.bind()
 
-const Icon = ({type, name, size, color, className, ...props}) => {
+const Icon = ({ type, name, size, color, className, ...props }) => {
   const fontLibMap = {
     fontAwesome: FontAwesome,
     materialDesign: MaterialDesign,
     typicons: Typicons,
-    githubOcticons: GithubOcticons
+    githubOcticons: GithubOcticons,
   }
 
   return React.createElement(fontLibMap[type][name], {
     size,
     color,
     className: cls(className),
-    ...props
+    ...props,
   })
 }
 
@@ -35,14 +35,14 @@ Icon.propTypes = {
   size: PropTypes.number,
   /** Hex code of icon color */
   color: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 }
 
 Icon.defaultProps = {
   type: 'fontAwesome',
   name: 'FaCheck',
   size: 18,
-  color: '#00142b'
+  color: '#00142b',
 }
 
 export default Icon

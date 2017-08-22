@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import { form as formCls } from '../../../styles'
+
 const classNames = cx.bind(formCls)
 
-const Input = ({id, label, className, cls, ...props}) => (
+const Input = ({ id, label, className, cls, ...props }) => (
   <div className={classNames('form-fields-container', className)}>
     {label && (<label htmlFor={id} className={classNames('label', cls.label)}>
       {label}
@@ -31,12 +32,12 @@ Input.propTypes = {
     /** Style for lable element */
     label: PropTypes.string,
     /** Style for input element */
-    input: PropTypes.string
-  })
+    input: PropTypes.string,
+  }),
 }
 
 Input.defaultProps = {
-  cls: {}
+  cls: {},
 }
 
 export default Input
