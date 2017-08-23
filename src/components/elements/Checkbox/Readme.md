@@ -22,7 +22,6 @@ initialState = { value: false, primary: false };
   <br />
   <Checkbox
     id="primary_checkbox_example"
-    size="medium"
     type="primary"
     isChecked={state.primary}
     onChange={() => setState({ primary: !state.primary})}>

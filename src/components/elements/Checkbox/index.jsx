@@ -98,7 +98,7 @@ Checkbox.propTypes = {
 }
 
 Checkbox.defaultProps = {
-  size: 'medium',
+  size: 'small',
   type: 'default',
   isChecked: false,
   isDisabled: false,
