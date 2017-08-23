@@ -12,7 +12,7 @@ const Checkbox = ({
   type,
   isChecked,
   isDisabled,
-  cls,
+  className,
   onChange,
   ...props
 }) => {
@@ -21,7 +21,7 @@ const Checkbox = ({
     /* eslint-disable quote-props */
     { 'Checkbox--disabled': isDisabled, 'Checkbox--checked': isChecked },
     /* eslint-enable quote-props */
-    cls.root,
+    className.root,
   )
 
   const iconSizeMap = {
@@ -36,7 +36,7 @@ const Checkbox = ({
     type: 'githubOcticons',
     size: iconSizeMap[size],
   }
-  if (type === 'primary') iconProps.color = '#fff'
+  if (type === 'dark') iconProps.color = '#fff'
 
   return (
     <label htmlFor={id} className={labelClass}>
@@ -51,13 +51,13 @@ const Checkbox = ({
       <span className={classNames(
         'Checkbox__box',
         {
-          'Checkbox__box--checked': isChecked && type !== 'primary',
+          'Checkbox__box--checked': isChecked && type !== 'dark',
           'Checkbox__box--checked--disabled': isChecked && isDisabled,
-          'Checkbox__box--checked-primary': isChecked && type === 'primary',
+          'Checkbox__box--checked-dark': isChecked && type === 'dark',
           'Checkbox__box--disabled': isDisabled,
           [`Checkbox__box--${size}`]: true,
         },
-        cls.box
+        className.box
       )}>
         { isChecked && <span className={classNames(
           'Checkbox__checkmark',
@@ -74,7 +74,7 @@ const Checkbox = ({
           'Checkbox__label--disabled': isDisabled,
           [`Checkbox__label--${size}`]: true,
         },
-        cls.labelText,
+        className.labelText,
       )}>
         {props.children}
       </span>
@@ -83,26 +83,35 @@ const Checkbox = ({
 }
 
 Checkbox.propTypes = {
+  /** Value of `htmlFor` of label and `id` of input attribute for accessibility  */
   id: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
-  type: PropTypes.oneOf(['default', 'primary']),
+  /** Type of checkbox style */
+  type: PropTypes.oneOf(['light', 'dark']),
+  /** Checked status of checkbox */
   isChecked: PropTypes.bool,
+  /** Disabled status of checkbox */
   isDisabled: PropTypes.bool,
-  cls: PropTypes.shape({
+  /** Customizing style for checkbox element */
+  className: PropTypes.shape({
+    /** Additional class on root element */
     root: PropTypes.string,
+    /** Additional class on square box element */
     box: PropTypes.string,
+    /** Additional class on checkbox label text element */
     labelText: PropTypes.string,
   }),
+  /** Input change event handler */
   onChange: PropTypes.func,
   children: PropTypes.node,
 }
 
 Checkbox.defaultProps = {
   size: 'small',
-  type: 'default',
+  type: 'light',
   isChecked: false,
   isDisabled: false,
-  cls: {},
+  className: {},
 }
 
 export default Checkbox

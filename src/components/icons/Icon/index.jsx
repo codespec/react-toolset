@@ -8,7 +8,7 @@ import * as GithubOcticons from 'react-icons/lib/go'
 /* eslint-enable no-unused-vars */
 import cx from 'classnames/bind'
 
-const cls = cx.bind()
+const classNames = cx.bind()
 
 const Icon = ({ type, name, size, color, className, ...props }) => {
   const fontLibMap = {
@@ -21,7 +21,7 @@ const Icon = ({ type, name, size, color, className, ...props }) => {
   return React.createElement(fontLibMap[type][name], {
     size,
     color,
-    className: cls(className),
+    className: classNames(className),
     ...props,
   })
 }
