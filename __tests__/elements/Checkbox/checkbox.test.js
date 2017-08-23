@@ -10,7 +10,7 @@ describe('<Checkbox />', () => {
   it('should have primary related class when the type is primary', () => {
     const props = {
       id: 'primaryCheckbox',
-      type: 'primary',
+      type: 'dark',
       onChange: jest.fn(),
     }
     const component = mount(<Checkbox {...props}>Primary Test</Checkbox>)
@@ -18,13 +18,13 @@ describe('<Checkbox />', () => {
     expect(component.props().onChange).toHaveBeenCalled()
     component.setProps({ isChecked: true })
     expect(component.find('Icon').length).toBe(1)
-    expect(component.find('.Checkbox__box--checked-primary').length).toBeGreaterThan(0)
+    expect(component.find('.Checkbox__box--checked-dark').length).toBeGreaterThan(0)
   })
 
   it('should have custom classes', () => {
     const props = {
       id: 'customClass',
-      cls: {
+      className: {
         root: 'customRoot',
         box: 'customBox',
         labelText: 'customLabel'

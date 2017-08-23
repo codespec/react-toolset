@@ -83,7 +83,7 @@ const Checkbox = ({
 }
 
 Checkbox.propTypes = {
-  /** Value of `htmlFor` of label and `id` of input attribute for accessibility  */
+  /** Value for `htmlFor` of label and `id` of input attribute for accessibility  */
   id: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
   /** Type of checkbox style */

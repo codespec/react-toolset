@@ -106,10 +106,10 @@
     color: $checkbox-checkmark-color;
   }
 
-  .Checkbox__box--checked-primary {
-    background: $checkbox-primary-checked-background;
-    border: $checkbox-primary-border;
-    color: $checkbox-primary-checkmark-color;
+  .Checkbox__box--checked-dark {
+    background: $checkbox-dark-checked-background;
+    border: $checkbox-dark-border;
+    color: $checkbox-dark-checkmark-color;
   }
 
   .Checkbox__box--checked--disabled {

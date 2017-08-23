@@ -17,15 +17,15 @@ initialState = { value: false, primary: false };
     id="checkbox_example"
     isChecked={state.value}
     onChange={() => setState({ value: !state.value})}>
-    Default Checkbox
+    Light Checkbox
   </Checkbox>
   <br />
   <Checkbox
     id="primary_checkbox_example"
-    type="primary"
+    type="dark"
     isChecked={state.primary}
     onChange={() => setState({ primary: !state.primary})}>
-    Primary Checkbox
+    Dark Checkbox
   </Checkbox>
 </div>
 ```
@@ -35,7 +35,7 @@ initialState = { value: false, primary: false };
 ```jsx
 initialState = {
   small: false, medium: false, large: false, xlarge: false,
-  priamrySmall: false, primaryMedium: false, primaryLarge: false, primaryXlarge: false,
+  darkSmall: false, darkMedium: false, darkLarge: false, darkXlarge: false,
 };
 <div>
   <div className="checkboxExampleSection">
@@ -44,7 +44,7 @@ initialState = {
       size="small"
       isChecked={state.small}
       onChange={() => setState({ small: !state.small})}
-      cls={{root: "checkboxInlineExample"}}>
+      className={{root: "checkboxInlineExample"}}>
       Small
     </Checkbox>
     <Checkbox
@@ -52,7 +52,7 @@ initialState = {
       size="medium"
       isChecked={state.medium}
       onChange={() => setState({ medium: !state.medium})}
-      cls={{root: 'checkboxInlineExample'}}>
+      className={{root: 'checkboxInlineExample'}}>
       Medium
     </Checkbox>
     <Checkbox
@@ -60,7 +60,7 @@ initialState = {
       size="large"
       isChecked={state.large}
       onChange={() => setState({ large: !state.large})}
-      cls={{root: 'checkboxInlineExample'}}>
+      className={{root: 'checkboxInlineExample'}}>
       Large
     </Checkbox>
     <Checkbox
@@ -68,45 +68,45 @@ initialState = {
       size="xlarge"
       isChecked={state.xlarge}
       onChange={() => setState({ xlarge: !state.xlarge})}
-      cls={{root: 'checkboxInlineExample'}}>
+      className={{root: 'checkboxInlineExample'}}>
       Extra Large
     </Checkbox>
   </div>
   <div className="checkboxExampleSection">
     <Checkbox
-      id="primary_small_checkbox_example"
+      id="dark_small_checkbox_example"
       size="small"
-      type="primary"
-      isChecked={state.primarySmall}
-      onChange={() => setState({ primarySmall: !state.primarySmall})}
-      cls={{root: "checkboxInlineExample"}}>
+      type="dark"
+      isChecked={state.darkSmall}
+      onChange={() => setState({ darkSmall: !state.darkSmall})}
+      className={{root: "checkboxInlineExample"}}>
       Small
     </Checkbox>
     <Checkbox
-      id="primary_medium_checkbox_example"
+      id="dark_medium_checkbox_example"
       size="medium"
-      type="primary"
-      isChecked={state.primaryMedium}
-      onChange={() => setState({ primaryMedium: !state.primaryMedium})}
-      cls={{root: "checkboxInlineExample"}}>
+      type="dark"
+      isChecked={state.darkMedium}
+      onChange={() => setState({ darkMedium: !state.darkMedium})}
+      className={{root: "checkboxInlineExample"}}>
       Medium
     </Checkbox>
     <Checkbox
-      id="primary_large_checkbox_example"
+      id="dark_large_checkbox_example"
       size="large"
-      type="primary"
-      isChecked={state.primaryLarge}
-      onChange={() => setState({ primaryLarge: !state.primaryLarge})}
-      cls={{root: "checkboxInlineExample"}}>
+      type="dark"
+      isChecked={state.darkLarge}
+      onChange={() => setState({ darkLarge: !state.darkLarge})}
+      className={{root: "checkboxInlineExample"}}>
       Large
     </Checkbox>
     <Checkbox
-      id="primary_xlarge_checkbox_example"
+      id="dark_xlarge_checkbox_example"
       size="xlarge"
-      type="primary"
-      isChecked={state.primaryXlarge}
-      onChange={() => setState({ primaryXlarge: !state.primaryXlarge})}
-      cls={{root: "checkboxInlineExample"}}>
+      type="dark"
+      isChecked={state.darkXlarge}
+      onChange={() => setState({ darkXlarge: !state.darkXlarge})}
+      className={{root: "checkboxInlineExample"}}>
       Extra Large
     </Checkbox>
   </div>

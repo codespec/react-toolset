@@ -308,10 +308,10 @@ $checkbox-disabled-checked-background: inherit !default;
 $checkbox-disabled-checkmark-color: $color-gray-medium !default;
 $checkbox-disabled-text: $color-gray-medium !default;
 
-$checkbox-primary-border: $border-width solid $color-primary !default;
-$checkbox-primary-checked-background: $color-primary !default;
-$checkbox-primary-unchecked-background: $color-white !default;
-$checkbox-primary-checkmark-color: $color-white !default;
+$checkbox-dark-border: $border-width solid $color-primary !default;
+$checkbox-dark-checked-background: $color-primary !default;
+$checkbox-dark-unchecked-background: $color-white !default;
+$checkbox-dark-checkmark-color: $color-white !default;
 
 $checkbox-error-border: $border-width solid $color-error !default;
 
