@@ -4,7 +4,7 @@ import cx from 'classnames/bind'
 import '../../../styles/react-toolset.scss'
 import { button as buttonCls } from '../../../styles'
 
-const cls = cx.bind(buttonCls)
+const classNames = cx.bind(buttonCls)
 
 const Button = ({
   role,
@@ -23,7 +23,7 @@ const Button = ({
 
   return React.createElement(tagName, {
     href: (link || null),
-    className: cls('Button', `Button-${role}`, `Button-${size}`, `Button-is-${style}`, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className),
+    className: classNames('Button', `Button-${role}`, `Button-${size}`, `Button-is-${style}`, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className),
     ...props,
   }, children)
 }

@@ -17,6 +17,18 @@
   margin-right: 6px;
 }
 
+/* checkbox */
+.checkboxInlineExample {
+  float: left;
+  margin-right: 6px;
+}
+
+.checkboxExampleSection {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
 /* Override style of react-styleguidist */
 p code[class^="code-"],
 li code[class^="code-"] {

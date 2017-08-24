@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import style from './style.scss'
 
-const cls = cx.bind(style)
+const classNames = cx.bind(style)
 
 const List = ({ type, className, children, ...props }) => {
   if (type === 'instruction') {
     return (
-      <ol className={cls('List', `List-${type}`, className)} {...props}>
+      <ol className={classNames('List', `List-${type}`, className)} {...props}>
         {children}
       </ol>
     )
   }
   return (
-    <ul className={cls('List', `List-${type}`, className)} {...props}>
+    <ul className={classNames('List', `List-${type}`, className)} {...props}>
       {children}
     </ul>
   )

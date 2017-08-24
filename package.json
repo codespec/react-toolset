@@ -1,6 +1,6 @@
 {
   "name": "@codespec/react-toolset",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "keywords": [
     "React",
     "Components",
@@ -68,7 +68,16 @@
       "web.jsx",
       "jsx",
       "node"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "coverageReporters": ["json", "lcov", "text", "text-summary"]
   },
   "babel": {
     "presets": [

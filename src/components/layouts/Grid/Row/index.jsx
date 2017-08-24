@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
-import cls from '../style.scss'
+import style from '../style.scss'
+
+const classNames = cx.bind(style)
 
 const Row = (props) => {
   const RowSizes = [
@@ -10,18 +12,15 @@ const Row = (props) => {
     'large',
   ]
 
-  const rowClasses = [
-    cls.row,
-    props.className,
-  ]
+  const rowClasses = [classNames('row'), props.className]
 
   if (props.collapse) {
     if (props.collapse === true) {
-      rowClasses.push(cls.collapse)
+      rowClasses.push(classNames('collapse'))
     } else {
       RowSizes.forEach((size) => {
         if (props.collapse[size]) {
-          rowClasses.push(cls[`${size}-collapse`])
+          rowClasses.push(classNames(`${size}-collapse`))
         }
       })
     }
@@ -30,7 +29,7 @@ const Row = (props) => {
   if (props.uncollapse) {
     RowSizes.forEach((size) => {
       if (props.uncollapse[size]) {
-        rowClasses.push(cls[`${size}-uncollapse`])
+        rowClasses.push(classNames(`${size}-uncollapse`))
       }
     })
   }
@@ -40,7 +39,7 @@ const Row = (props) => {
   }
 
   return (
-    <div className={cx(rowClasses)} onClick={props.onClick}>
+    <div className={classNames(rowClasses.join(' '))} onClick={props.onClick}>
       {props.children}
     </div>
   )

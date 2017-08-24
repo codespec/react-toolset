@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import style from '../style.scss'
 
-const cls = cx.bind(style)
+const classNames = cx.bind(style)
 
 const Column = ({ className, onClick, children, ...props }) => {
   const ColumnSizes = [
@@ -13,28 +13,28 @@ const Column = ({ className, onClick, children, ...props }) => {
     'print',
   ]
 
-  const columnClasses = [cls('column'), className]
+  const columnClasses = [classNames('column'), className]
 
   ColumnSizes.forEach((size) => {
     if (props[size]) {
-      columnClasses.push(cls(`${size}-${props[size]}`))
+      columnClasses.push(classNames(`${size}-${props[size]}`))
     }
     if (props.offset && (typeof props.offset[size] !== 'undefined')) {
-      columnClasses.push(cls(`${size}-offset-${props.offset[size]}`))
+      columnClasses.push(classNames(`${size}-offset-${props.offset[size]}`))
     }
     if (props.push && (typeof props.push[size] !== 'undefined')) {
-      columnClasses.push(cls(`${size}-push-${props.push[size]}`))
+      columnClasses.push(classNames(`${size}-push-${props.push[size]}`))
     }
     if (props.pull && (typeof props.pull[size] !== 'undefined')) {
-      columnClasses.push(cls(`${size}-pull-${props.pull[size]}`))
+      columnClasses.push(classNames(`${size}-pull-${props.pull[size]}`))
     }
     if (props.end) {
-      columnClasses.push(cls('end'))
+      columnClasses.push(classNames('end'))
     }
   })
 
   return (
-    <div className={cls(columnClasses.join(' '))} onClick={onClick}>
+    <div className={classNames(columnClasses.join(' '))} onClick={onClick}>
       {children}
     </div>
   )
