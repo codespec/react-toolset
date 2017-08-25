@@ -2,19 +2,19 @@ import React from 'react'
 import { Row, Column } from '../../../index.js'
 
 describe('<Row />', () => {
-  test('it should render Row component', () => {
+  it('should render Row component', () => {
     const component = shallow(<Row><Column>column</Column></Row>)
     expect(component).toMatchSnapshot()
   })
 
-  test('it should call onClick method', () => {
+  it('should call onClick method', () => {
     const onClick = jest.fn()
     const component = shallow(<Row onClick={onClick}>row</Row>)
     component.find('div').simulate('click')
     expect(onClick).toHaveBeenCalled()
   })
 
-  test('it should not have gutter with collapse', () => {
+  it('should not have gutter with collapse', () => {
     const props = {
       collapse: true
     }
@@ -22,7 +22,7 @@ describe('<Row />', () => {
     expect(component.props().collapse).toBe(true)
   })
 
-  test('it should have correct classes for collapse', () => {
+  it('should have correct classes for collapse', () => {
     const collapseProps = {
       collapse: true
     }
@@ -42,7 +42,7 @@ describe('<Row />', () => {
     expect(component.find('.large-collapse').length).toBe(0)
   })
 
-  test('it should have correct classes for uncollapse', () => {
+  it('should have correct classes for uncollapse', () => {
     const props = {
       uncollapse: {
         small: true,
@@ -56,7 +56,7 @@ describe('<Row />', () => {
     expect(component.find('.large-uncollapse').length).toBe(0)
   })
 
-  test('it should have gutter with uncollapse', () => {
+  it('should have gutter with uncollapse', () => {
     const props = {
       uncollapse: {
         small: true,
@@ -68,31 +68,31 @@ describe('<Row />', () => {
     expect(component.props().uncollapse.small).toBe(true)
   })
 
-  test('it should have custom classes', () => {
+  it('should have custom classes', () => {
     const component = mount(<Row className='custom-class'>Row</Row>)
     expect(component.find('.custom-class').length).not.toBe(0)
   })
 
-  test('it should render children element', () => {
+  it('should render children element', () => {
     const component = mount(<Row><p>row paragraph</p></Row>)
     expect(component.find('p').length).toBeGreaterThan(0)
   })
 })
 
 describe('<Column />', () => {
-  test('it should render Column component', () => {
+  it('should render Column component', () => {
     const component = shallow(<Column>column</Column>)
     expect(component).toMatchSnapshot()
   })
 
-  test('it should call onClock method', () => {
+  it('should call onClock method', () => {
     const onClick = jest.fn()
     const component = shallow(<Column onClick={onClick}>column</Column>)
     component.find('div').simulate('click')
     expect(onClick).toHaveBeenCalled()
   })
 
-  test('it should have correct value for size', () => {
+  it('should have correct value for size', () => {
     const props = {
       small: 12,
       medium: 6,

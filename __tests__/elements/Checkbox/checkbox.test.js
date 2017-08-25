@@ -2,12 +2,12 @@ import React from 'react'
 import { Checkbox } from '../../../index.js'
 
 describe('<Checkbox />', () => {
-  test('it should render Checkbox component', () => {
+  it('should render Checkbox component', () => {
     const component = shallow(<Checkbox id='testCheckbox'>Checkbox Test</Checkbox>)
     expect(component).toMatchSnapshot()
   })
 
-  test('it should have primary related class when the type is primary', () => {
+  it('should have primary related class when the type is primary', () => {
     const props = {
       id: 'primaryCheckbox',
       type: 'dark',
@@ -21,7 +21,7 @@ describe('<Checkbox />', () => {
     expect(component.find('.Checkbox__box--checked-dark').length).toBeGreaterThan(0)
   })
 
-  test('it should have custom classes', () => {
+  it('should have custom classes', () => {
     const props = {
       id: 'customClass',
       className: {
@@ -36,7 +36,7 @@ describe('<Checkbox />', () => {
     expect(component.find('.Checkbox__label.customLabel').length).not.toBe(0)
   })
 
-  test('it should have size classes', () => {
+  it('should have size classes', () => {
     const props = {
       id: 'largeCheckbox',
       size: 'large'
