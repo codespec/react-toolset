@@ -4,8 +4,6 @@
 import { Breadcrumb } from '@codespec/react-toolset'
 ```
 
-`<Breadcrumb>` is a navigation component representing the site hierarchy.
-
 ### Basic Breadcrumb
 
 ```jsx
