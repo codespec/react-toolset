@@ -11,16 +11,20 @@ $ npm run docs
 react-toolset/
   src/
     components/
-      elements/
-        component-name/
-          index.jsx
-          style.scss(optional)
-          Readme.md
-      layouts/
-        component-name/
-          index.jsx
-          style.scss(optional)
-          Readme.md
+      component-name/
+        index.jsx
+        style.scss(optional)
+        Readme.md
+    elements/
+      component-name/
+        index.jsx
+        style.scss(optional)
+        Readme.md
+    layouts/
+      component-name/
+        index.jsx
+        style.scss(optional)
+        Readme.md
 ```
 
 Always provide `index.jsx` so your component can be imported as `bumblebee/src/component/elements/component-name`. Main stylesheet `style.scss` is not meant to be exposed but keep it named so for clarify.

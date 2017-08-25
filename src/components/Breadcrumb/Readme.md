@@ -17,9 +17,20 @@ import { Breadcrumb } from '@codespec/react-toolset'
 ### Custom Breadcrumb
 
 ```jsx
-<Breadcrumb className='Breadcrumb--double'>
-  <a href="/">Home</a>
-  <a href="/route">Route</a>
-  You are here
-</Breadcrumb>
+<div>
+  <div>
+    <Breadcrumb icon={{ type: 'fontAwesome', name: 'FaCaretRight', size: 24 }}>
+      <a href="/">Home</a>
+      <a href="/route">Route</a>
+      You are here
+    </Breadcrumb>
+  </div>
+  <div>
+    <Breadcrumb icon={{ type: 'typicons', name: 'TiChevronRightOutline' }}>
+      <a href="/">Home</a>
+      <a href="/route">Route</a>
+      You are here
+    </Breadcrumb>
+  </div>
+</div>
 ```

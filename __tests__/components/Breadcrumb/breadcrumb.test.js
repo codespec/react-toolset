@@ -6,4 +6,9 @@ describe('<Breadcrumb />', () => {
     const component = mount(<Breadcrumb><a href="/">Home</a>You are here</Breadcrumb>)
     expect(component).toMatchSnapshot()
   })
+
+  test('it should render correct number of Icon component', () => {
+    const component = mount(<Breadcrumb><a href="/">Home</a>You are here</Breadcrumb>)
+    expect(component.find('Icon').length).toBe(1)
+  })
 })
