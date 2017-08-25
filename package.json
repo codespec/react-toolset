@@ -43,7 +43,7 @@
       "<rootDir>/config/jest.config.js"
     ],
     "testMatch": [
-      "<rootDir>/__tests__/**/*.js?(x)"
+      "<rootDir>/__tests__/**/*.test.js?(x)"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -77,7 +77,7 @@
         "statements": 80
       }
     },
-    "coverageReporters": ["json", "lcov", "text", "text-summary"]
+    "coverageReporters": ["json", "text", "text-summary"]
   },
   "babel": {
     "presets": [

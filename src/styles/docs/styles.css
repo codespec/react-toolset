@@ -29,6 +29,11 @@
   margin-bottom: 6px;
 }
 
+/* breadcrumb */
+.Breadcrumb.Breadcrumb--double > li + li::before {
+  content: '::';
+}
+
 /* Override style of react-styleguidist */
 p code[class^="code-"],
 li code[class^="code-"] {

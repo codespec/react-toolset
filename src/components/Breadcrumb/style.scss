@@ -1,0 +1,9 @@
+:local {
+  @import '../../styles/config';
+
+  .Breadcrumb > li + li::before {
+    content: '>';
+    margin-right: $list-padding-loose;
+    color: $color-body;
+  }
+}
