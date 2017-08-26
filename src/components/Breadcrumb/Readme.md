@@ -32,5 +32,19 @@ import { Breadcrumb } from '@codespec/react-toolset'
       You are here
     </Breadcrumb>
   </div>
+  <div>
+    <Breadcrumb icon={{ type: 'githubOcticons', name: 'GoDash' }}>
+      <a href="/">Home</a>
+      <a href="/route">Route</a>
+      You are here
+    </Breadcrumb>
+  </div>
+  <div>
+    <Breadcrumb icon={{ type: 'materialDesign', name: 'MdFiberManualRecord', size: 8 }}>
+      <a href="/">Home</a>
+      <a href="/route">Route</a>
+      You are here
+    </Breadcrumb>
+  </div>
 </div>
 ```

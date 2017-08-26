@@ -14,17 +14,15 @@ const Breadcrumb = ({ className, icon, children }) => {
     name: 'MdNavigateNext',
     size: 20,
   }, icon)
-  return (<List type="horizontal" className={classNames('Breadcrumb', className.root)}>
+  return (<List type="horizontal" className={classNames(className.root)}>
     {Children.map(children, (child, i) => {
       return (
         <ListItem key={i} className={classNames(className.list)}>
           {child}
           {i !== children.length - 1 &&
             <Icon
-              type={iconStyle.type}
-              name={iconStyle.name}
-              size={iconStyle.size}
-              className={classNames('Breadcrumb__icon', className.icon)} />
+              className={classNames('Breadcrumb__icon', className.icon)}
+              {...iconStyle} />
           }
         </ListItem>
       )
