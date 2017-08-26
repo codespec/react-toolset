@@ -27,7 +27,7 @@ react-toolset/
         Readme.md
 ```
 
-Always provide `index.jsx` so your component can be imported as `bumblebee/src/component/elements/component-name`. Main stylesheet `style.scss` is not meant to be exposed but keep it named so for clarify.
+Always provide `index.jsx` so your component can be imported as `{path}/component-name` in the `index.js` of root directory. Main stylesheet `style.scss` is not meant to be exposed but keep it named so for clarify.
 
 Always document new components and component prop additions in the `index.jsx` and `Readme.md` files. And, be sure to include at least one example in `Readme.md`.
 
