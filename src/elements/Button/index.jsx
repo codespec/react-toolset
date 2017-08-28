@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
-import '../../../styles/react-toolset.scss'
-import { button as buttonCls } from '../../../styles'
+import '../../styles/react-toolset.scss'
+import { button as buttonCls } from '../../styles'
 
 const classNames = cx.bind(buttonCls)
 

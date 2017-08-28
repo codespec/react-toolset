@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
-import { form as formCls } from '../../../styles'
+import { form as formCls } from '../../styles'
 
 const classNames = cx.bind(formCls)
 

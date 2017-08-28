@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-/* eslint-disable no-unused-vars */
 import * as FontAwesome from 'react-icons/lib/fa'
 import * as MaterialDesign from 'react-icons/lib/md'
 import * as Typicons from 'react-icons/lib/ti'
 import * as GithubOcticons from 'react-icons/lib/go'
-/* eslint-enable no-unused-vars */
 import cx from 'classnames/bind'
+import style from './style.scss'
 
-const classNames = cx.bind()
+const classNames = cx.bind(style)
 
 const Icon = ({ type, name, size, color, className, ...props }) => {
   const fontLibMap = {

@@ -22,6 +22,40 @@ describe('<Row />', () => {
     expect(component.props().collapse).toBe(true)
   })
 
+  it('should have correct classes for collapse', () => {
+    const collapseProps = {
+      collapse: true
+    }
+    const sizeCollapseProps = {
+      collapse: {
+        small: true,
+        medium: false,
+        large: false
+      }
+    }
+    let component = mount(<Row {...collapseProps}>row</Row>)
+    expect(component.find('.collapse').length).not.toBe(0)
+
+    component = mount(<Row {...sizeCollapseProps}>row</Row>)
+    expect(component.find('.small-collapse').length).not.toBe(0)
+    expect(component.find('.medium-collapse').length).toBe(0)
+    expect(component.find('.large-collapse').length).toBe(0)
+  })
+
+  it('should have correct classes for uncollapse', () => {
+    const props = {
+      uncollapse: {
+        small: true,
+        medium: true,
+        large: false
+      }
+    }
+    const component = mount(<Row {...props}>Row</Row>)
+    expect(component.find('.small-uncollapse').length).not.toBe(0)
+    expect(component.find('.medium-uncollapse').length).not.toBe(0)
+    expect(component.find('.large-uncollapse').length).toBe(0)
+  })
+
   it('should have gutter with uncollapse', () => {
     const props = {
       uncollapse: {
@@ -32,6 +66,11 @@ describe('<Row />', () => {
     }
     const component = mount(<Row {...props}>row</Row>)
     expect(component.props().uncollapse.small).toBe(true)
+  })
+
+  it('should have custom classes', () => {
+    const component = mount(<Row className='custom-class'>Row</Row>)
+    expect(component.find('.custom-class').length).not.toBe(0)
   })
 
   it('should render children element', () => {

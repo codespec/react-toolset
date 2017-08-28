@@ -17,19 +17,23 @@ module.exports = {
     },
     {
       name: 'Icons',
-      components: './src/components/icons/**/index.jsx'
+      components: './src/icons/**/index.jsx'
     },
     {
       name: 'Elements',
-      components: './src/components/elements/**/index.jsx'
+      components: './src/elements/**/index.jsx'
+    },
+    {
+      name: 'Components',
+      components: './src/components/**/index.jsx'
     },
     {
       name: 'Layouts',
       sections: [
         {
           name: 'Grid',
-          content: './src/components/layouts/Grid/Readme.md',
-          components: './src/components/layouts/Grid/**/index.jsx'
+          content: './src/layouts/Grid/Readme.md',
+          components: './src/layouts/Grid/**/index.jsx'
         }
       ]
     }
