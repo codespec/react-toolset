@@ -72,3 +72,31 @@ Since this react-toolset library is not compiling production package, you need t
   ```jsx
   import { Button } from '@codespec/react-toolset'
   ```
+
+If you are using `create-react-app`, use need to follow this.
+
+1. Eject your predefined configuration
+
+  ```sh
+  yarn eject
+  ```
+
+2. Configure the Webpack like as follow
+
+  ```js
+  // Process JS with Babel.
+  {
+    test: /\.(js|jsx)$/,
+    include: [paths.appSrc, /node_modules\/@codespec/],     // add @codespec module to include
+    loader: require.resolve('babel-loader'),
+    options: {
+
+      // This is a feature of `babel-loader` for webpack (not Babel itself).
+      // It enables caching results in ./node_modules/.cache/babel-loader/
+      // directory for faster rebuilds.
+      cacheDirectory: true,
+    },
+  },
+  ```
+
+3. Configure SCSS as above
