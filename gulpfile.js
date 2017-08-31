@@ -18,11 +18,16 @@ gulp.task('js', function() {
   .pipe(gulp.dest('dist'))
 })
 
+gulp.task('copy', function() {
+  return gulp.src('./src/**/*.svg')
+    .pipe(gulp.dest('dist'))
+})
+
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('default', ['js', 'sass']);
+gulp.task('default', ['js', 'copy', 'sass']);
 /* eslint-enable */
