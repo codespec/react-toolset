@@ -21,7 +21,7 @@ const Checkbox = ({
     /* eslint-disable quote-props */
     { 'Checkbox--disabled': isDisabled, 'Checkbox--checked': isChecked },
     /* eslint-enable quote-props */
-    className.root,
+    className.root
   )
 
   const iconSizeMap = {
@@ -74,7 +74,7 @@ const Checkbox = ({
           'Checkbox__label--disabled': isDisabled,
           [`Checkbox__label--${size}`]: true,
         },
-        className.labelText,
+        className.labelText
       )}>
         {props.children}
       </span>

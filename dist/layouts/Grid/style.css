@@ -1,0 +1,979 @@
+:local {
+  /*
+    Based on the responsive grid and visibility classes from Zurb Foundation v5.
+  */ }
+  :local .row {
+    margin: 0 auto;
+    max-width: 1020px;
+    width: 100%; }
+  :local .row::before,
+  :local .row::after {
+    content: " ";
+    display: table; }
+  :local .row::after {
+    clear: both; }
+  :local .row.collapse > .column,
+  :local .row.collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+  :local .row.collapse .row {
+    margin-left: 0;
+    margin-right: 0; }
+  :local .row .row {
+    margin: 0 -6px;
+    max-width: none;
+    width: auto; }
+  :local .row .row::before,
+  :local .row .row::after {
+    content: " ";
+    display: table; }
+  :local .row .row::after {
+    clear: both; }
+  :local .row .row.collapse {
+    margin: 0;
+    max-width: none;
+    width: auto; }
+  :local .row .row.collapse::before,
+  :local .row .row.collapse::after {
+    content: " ";
+    display: table; }
+  :local .row .row.collapse::after {
+    clear: both; }
+  :local .column,
+  :local .columns {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 100%;
+    float: left; }
+  :local .column + .column:last-child,
+  :local .columns + .column:last-child,
+  :local .column + .columns:last-child,
+  :local .columns + .columns:last-child {
+    float: right; }
+  :local .column + .column.end,
+  :local .columns + .column.end,
+  :local .column + .columns.end,
+  :local .columns + .columns.end {
+    float: left; }
+  @media only screen {
+    :local .small-push-0 {
+      position: relative;
+      left: 0;
+      right: auto; }
+    :local .small-pull-0 {
+      position: relative;
+      right: 0;
+      left: auto; }
+    :local .small-push-1 {
+      position: relative;
+      left: 8.33333%;
+      right: auto; }
+    :local .small-pull-1 {
+      position: relative;
+      right: 8.33333%;
+      left: auto; }
+    :local .small-push-2 {
+      position: relative;
+      left: 16.66667%;
+      right: auto; }
+    :local .small-pull-2 {
+      position: relative;
+      right: 16.66667%;
+      left: auto; }
+    :local .small-push-3 {
+      position: relative;
+      left: 25%;
+      right: auto; }
+    :local .small-pull-3 {
+      position: relative;
+      right: 25%;
+      left: auto; }
+    :local .small-push-4 {
+      position: relative;
+      left: 33.33333%;
+      right: auto; }
+    :local .small-pull-4 {
+      position: relative;
+      right: 33.33333%;
+      left: auto; }
+    :local .small-push-5 {
+      position: relative;
+      left: 41.66667%;
+      right: auto; }
+    :local .small-pull-5 {
+      position: relative;
+      right: 41.66667%;
+      left: auto; }
+    :local .small-push-6 {
+      position: relative;
+      left: 50%;
+      right: auto; }
+    :local .small-pull-6 {
+      position: relative;
+      right: 50%;
+      left: auto; }
+    :local .small-push-7 {
+      position: relative;
+      left: 58.33333%;
+      right: auto; }
+    :local .small-pull-7 {
+      position: relative;
+      right: 58.33333%;
+      left: auto; }
+    :local .small-push-8 {
+      position: relative;
+      left: 66.66667%;
+      right: auto; }
+    :local .small-pull-8 {
+      position: relative;
+      right: 66.66667%;
+      left: auto; }
+    :local .small-push-9 {
+      position: relative;
+      left: 75%;
+      right: auto; }
+    :local .small-pull-9 {
+      position: relative;
+      right: 75%;
+      left: auto; }
+    :local .small-push-10 {
+      position: relative;
+      left: 83.33333%;
+      right: auto; }
+    :local .small-pull-10 {
+      position: relative;
+      right: 83.33333%;
+      left: auto; }
+    :local .small-push-11 {
+      position: relative;
+      left: 91.66667%;
+      right: auto; }
+    :local .small-pull-11 {
+      position: relative;
+      right: 91.66667%;
+      left: auto; }
+    :local .column,
+    :local .columns {
+      position: relative;
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; }
+    :local .small-1 {
+      width: 8.33333%; }
+    :local .small-2 {
+      width: 16.66667%; }
+    :local .small-3 {
+      width: 25%; }
+    :local .small-4 {
+      width: 33.33333%; }
+    :local .small-5 {
+      width: 41.66667%; }
+    :local .small-6 {
+      width: 50%; }
+    :local .small-7 {
+      width: 58.33333%; }
+    :local .small-8 {
+      width: 66.66667%; }
+    :local .small-9 {
+      width: 75%; }
+    :local .small-10 {
+      width: 83.33333%; }
+    :local .small-11 {
+      width: 91.66667%; }
+    :local .small-12 {
+      width: 100%; }
+    :local .small-offset-0 {
+      margin-left: 0 !important; }
+    :local .small-offset-1 {
+      margin-left: 8.33333% !important; }
+    :local .small-offset-2 {
+      margin-left: 16.66667% !important; }
+    :local .small-offset-3 {
+      margin-left: 25% !important; }
+    :local .small-offset-4 {
+      margin-left: 33.33333% !important; }
+    :local .small-offset-5 {
+      margin-left: 41.66667% !important; }
+    :local .small-offset-6 {
+      margin-left: 50% !important; }
+    :local .small-offset-7 {
+      margin-left: 58.33333% !important; }
+    :local .small-offset-8 {
+      margin-left: 66.66667% !important; }
+    :local .small-offset-9 {
+      margin-left: 75% !important; }
+    :local .small-offset-10 {
+      margin-left: 83.33333% !important; }
+    :local .small-offset-11 {
+      margin-left: 91.66667% !important; }
+    :local .small-reset-order {
+      float: left;
+      left: auto;
+      margin-left: 0;
+      margin-right: 0;
+      right: auto; }
+    :local .row.small-collapse > .column,
+    :local .row.small-collapse > .columns {
+      padding-left: 0;
+      padding-right: 0; }
+    :local .row.small-collapse .row {
+      margin-left: 0;
+      margin-right: 0; }
+    :local .row.small-uncollapse > .column,
+    :local .row.small-uncollapse > .columns {
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; } }
+  @media only screen and (min-width: 768px) {
+    :local .medium-push-0 {
+      position: relative;
+      left: 0;
+      right: auto; }
+    :local .medium-pull-0 {
+      position: relative;
+      right: 0;
+      left: auto; }
+    :local .medium-push-1 {
+      position: relative;
+      left: 8.33333%;
+      right: auto; }
+    :local .medium-pull-1 {
+      position: relative;
+      right: 8.33333%;
+      left: auto; }
+    :local .medium-push-2 {
+      position: relative;
+      left: 16.66667%;
+      right: auto; }
+    :local .medium-pull-2 {
+      position: relative;
+      right: 16.66667%;
+      left: auto; }
+    :local .medium-push-3 {
+      position: relative;
+      left: 25%;
+      right: auto; }
+    :local .medium-pull-3 {
+      position: relative;
+      right: 25%;
+      left: auto; }
+    :local .medium-push-4 {
+      position: relative;
+      left: 33.33333%;
+      right: auto; }
+    :local .medium-pull-4 {
+      position: relative;
+      right: 33.33333%;
+      left: auto; }
+    :local .medium-push-5 {
+      position: relative;
+      left: 41.66667%;
+      right: auto; }
+    :local .medium-pull-5 {
+      position: relative;
+      right: 41.66667%;
+      left: auto; }
+    :local .medium-push-6 {
+      position: relative;
+      left: 50%;
+      right: auto; }
+    :local .medium-pull-6 {
+      position: relative;
+      right: 50%;
+      left: auto; }
+    :local .medium-push-7 {
+      position: relative;
+      left: 58.33333%;
+      right: auto; }
+    :local .medium-pull-7 {
+      position: relative;
+      right: 58.33333%;
+      left: auto; }
+    :local .medium-push-8 {
+      position: relative;
+      left: 66.66667%;
+      right: auto; }
+    :local .medium-pull-8 {
+      position: relative;
+      right: 66.66667%;
+      left: auto; }
+    :local .medium-push-9 {
+      position: relative;
+      left: 75%;
+      right: auto; }
+    :local .medium-pull-9 {
+      position: relative;
+      right: 75%;
+      left: auto; }
+    :local .medium-push-10 {
+      position: relative;
+      left: 83.33333%;
+      right: auto; }
+    :local .medium-pull-10 {
+      position: relative;
+      right: 83.33333%;
+      left: auto; }
+    :local .medium-push-11 {
+      position: relative;
+      left: 91.66667%;
+      right: auto; }
+    :local .medium-pull-11 {
+      position: relative;
+      right: 91.66667%;
+      left: auto; }
+    :local .column,
+    :local .columns {
+      position: relative;
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; }
+    :local .medium-1 {
+      width: 8.33333%; }
+    :local .medium-2 {
+      width: 16.66667%; }
+    :local .medium-3 {
+      width: 25%; }
+    :local .medium-4 {
+      width: 33.33333%; }
+    :local .medium-5 {
+      width: 41.66667%; }
+    :local .medium-6 {
+      width: 50%; }
+    :local .medium-7 {
+      width: 58.33333%; }
+    :local .medium-8 {
+      width: 66.66667%; }
+    :local .medium-9 {
+      width: 75%; }
+    :local .medium-10 {
+      width: 83.33333%; }
+    :local .medium-11 {
+      width: 91.66667%; }
+    :local .medium-12 {
+      width: 100%; }
+    :local .medium-offset-0 {
+      margin-left: 0 !important; }
+    :local .medium-offset-1 {
+      margin-left: 8.33333% !important; }
+    :local .medium-offset-2 {
+      margin-left: 16.66667% !important; }
+    :local .medium-offset-3 {
+      margin-left: 25% !important; }
+    :local .medium-offset-4 {
+      margin-left: 33.33333% !important; }
+    :local .medium-offset-5 {
+      margin-left: 41.66667% !important; }
+    :local .medium-offset-6 {
+      margin-left: 50% !important; }
+    :local .medium-offset-7 {
+      margin-left: 58.33333% !important; }
+    :local .medium-offset-8 {
+      margin-left: 66.66667% !important; }
+    :local .medium-offset-9 {
+      margin-left: 75% !important; }
+    :local .medium-offset-10 {
+      margin-left: 83.33333% !important; }
+    :local .medium-offset-11 {
+      margin-left: 91.66667% !important; }
+    :local .medium-reset-order {
+      float: left;
+      left: auto;
+      margin-left: 0;
+      margin-right: 0;
+      right: auto; }
+    :local .row.medium-collapse > .column,
+    :local .row.medium-collapse > .columns {
+      padding-left: 0;
+      padding-right: 0; }
+    :local .row.medium-collapse .row {
+      margin-left: 0;
+      margin-right: 0; }
+    :local .row.medium-uncollapse > .column,
+    :local .row.medium-uncollapse > .columns {
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; } }
+  @media only screen and (min-width: 1025px) {
+    :local .large-push-0 {
+      position: relative;
+      left: 0;
+      right: auto; }
+    :local .large-pull-0 {
+      position: relative;
+      right: 0;
+      left: auto; }
+    :local .large-push-1 {
+      position: relative;
+      left: 8.33333%;
+      right: auto; }
+    :local .large-pull-1 {
+      position: relative;
+      right: 8.33333%;
+      left: auto; }
+    :local .large-push-2 {
+      position: relative;
+      left: 16.66667%;
+      right: auto; }
+    :local .large-pull-2 {
+      position: relative;
+      right: 16.66667%;
+      left: auto; }
+    :local .large-push-3 {
+      position: relative;
+      left: 25%;
+      right: auto; }
+    :local .large-pull-3 {
+      position: relative;
+      right: 25%;
+      left: auto; }
+    :local .large-push-4 {
+      position: relative;
+      left: 33.33333%;
+      right: auto; }
+    :local .large-pull-4 {
+      position: relative;
+      right: 33.33333%;
+      left: auto; }
+    :local .large-push-5 {
+      position: relative;
+      left: 41.66667%;
+      right: auto; }
+    :local .large-pull-5 {
+      position: relative;
+      right: 41.66667%;
+      left: auto; }
+    :local .large-push-6 {
+      position: relative;
+      left: 50%;
+      right: auto; }
+    :local .large-pull-6 {
+      position: relative;
+      right: 50%;
+      left: auto; }
+    :local .large-push-7 {
+      position: relative;
+      left: 58.33333%;
+      right: auto; }
+    :local .large-pull-7 {
+      position: relative;
+      right: 58.33333%;
+      left: auto; }
+    :local .large-push-8 {
+      position: relative;
+      left: 66.66667%;
+      right: auto; }
+    :local .large-pull-8 {
+      position: relative;
+      right: 66.66667%;
+      left: auto; }
+    :local .large-push-9 {
+      position: relative;
+      left: 75%;
+      right: auto; }
+    :local .large-pull-9 {
+      position: relative;
+      right: 75%;
+      left: auto; }
+    :local .large-push-10 {
+      position: relative;
+      left: 83.33333%;
+      right: auto; }
+    :local .large-pull-10 {
+      position: relative;
+      right: 83.33333%;
+      left: auto; }
+    :local .large-push-11 {
+      position: relative;
+      left: 91.66667%;
+      right: auto; }
+    :local .large-pull-11 {
+      position: relative;
+      right: 91.66667%;
+      left: auto; }
+    :local .column,
+    :local .columns {
+      position: relative;
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; }
+    :local .large-1 {
+      width: 8.33333%; }
+    :local .large-2 {
+      width: 16.66667%; }
+    :local .large-3 {
+      width: 25%; }
+    :local .large-4 {
+      width: 33.33333%; }
+    :local .large-5 {
+      width: 41.66667%; }
+    :local .large-6 {
+      width: 50%; }
+    :local .large-7 {
+      width: 58.33333%; }
+    :local .large-8 {
+      width: 66.66667%; }
+    :local .large-9 {
+      width: 75%; }
+    :local .large-10 {
+      width: 83.33333%; }
+    :local .large-11 {
+      width: 91.66667%; }
+    :local .large-12 {
+      width: 100%; }
+    :local .large-offset-0 {
+      margin-left: 0 !important; }
+    :local .large-offset-1 {
+      margin-left: 8.33333% !important; }
+    :local .large-offset-2 {
+      margin-left: 16.66667% !important; }
+    :local .large-offset-3 {
+      margin-left: 25% !important; }
+    :local .large-offset-4 {
+      margin-left: 33.33333% !important; }
+    :local .large-offset-5 {
+      margin-left: 41.66667% !important; }
+    :local .large-offset-6 {
+      margin-left: 50% !important; }
+    :local .large-offset-7 {
+      margin-left: 58.33333% !important; }
+    :local .large-offset-8 {
+      margin-left: 66.66667% !important; }
+    :local .large-offset-9 {
+      margin-left: 75% !important; }
+    :local .large-offset-10 {
+      margin-left: 83.33333% !important; }
+    :local .large-offset-11 {
+      margin-left: 91.66667% !important; }
+    :local .large-reset-order {
+      float: left;
+      left: auto;
+      margin-left: 0;
+      margin-right: 0;
+      right: auto; }
+    :local .row.large-collapse > .column,
+    :local .row.large-collapse > .columns {
+      padding-left: 0;
+      padding-right: 0; }
+    :local .row.large-collapse .row {
+      margin-left: 0;
+      margin-right: 0; }
+    :local .row.large-uncollapse > .column,
+    :local .row.large-uncollapse > .columns {
+      padding-left: 6px;
+      padding-right: 6px;
+      float: left; } }
+  :local [class*="block-grid-"] {
+    display: block;
+    padding: 0;
+    margin: 0 -6px; }
+  :local [class*="block-grid-"]::before,
+  :local [class*="block-grid-"]::after {
+    content: " ";
+    display: table; }
+  :local [class*="block-grid-"]::after {
+    clear: both; }
+  :local [class*="block-grid-"] > li {
+    display: block;
+    float: left;
+    height: auto;
+    padding: 0 6px 12px; }
+  @media only screen {
+    :local .small-block-grid-1 > li {
+      list-style: none;
+      width: 100%; }
+    :local .small-block-grid-1 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-1 > li:nth-of-type(1n+1) {
+      clear: both; }
+    :local .small-block-grid-2 > li {
+      list-style: none;
+      width: 50%; }
+    :local .small-block-grid-2 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-2 > li:nth-of-type(2n+1) {
+      clear: both; }
+    :local .small-block-grid-3 > li {
+      list-style: none;
+      width: 33.33333%; }
+    :local .small-block-grid-3 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-3 > li:nth-of-type(3n+1) {
+      clear: both; }
+    :local .small-block-grid-4 > li {
+      list-style: none;
+      width: 25%; }
+    :local .small-block-grid-4 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-4 > li:nth-of-type(4n+1) {
+      clear: both; }
+    :local .small-block-grid-5 > li {
+      list-style: none;
+      width: 20%; }
+    :local .small-block-grid-5 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-5 > li:nth-of-type(5n+1) {
+      clear: both; }
+    :local .small-block-grid-6 > li {
+      list-style: none;
+      width: 16.66667%; }
+    :local .small-block-grid-6 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-6 > li:nth-of-type(6n+1) {
+      clear: both; }
+    :local .small-block-grid-7 > li {
+      list-style: none;
+      width: 14.28571%; }
+    :local .small-block-grid-7 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-7 > li:nth-of-type(7n+1) {
+      clear: both; }
+    :local .small-block-grid-8 > li {
+      list-style: none;
+      width: 12.5%; }
+    :local .small-block-grid-8 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-8 > li:nth-of-type(8n+1) {
+      clear: both; }
+    :local .small-block-grid-9 > li {
+      list-style: none;
+      width: 11.11111%; }
+    :local .small-block-grid-9 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-9 > li:nth-of-type(9n+1) {
+      clear: both; }
+    :local .small-block-grid-10 > li {
+      list-style: none;
+      width: 10%; }
+    :local .small-block-grid-10 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-10 > li:nth-of-type(10n+1) {
+      clear: both; }
+    :local .small-block-grid-11 > li {
+      list-style: none;
+      width: 9.09091%; }
+    :local .small-block-grid-11 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-11 > li:nth-of-type(11n+1) {
+      clear: both; }
+    :local .small-block-grid-12 > li {
+      list-style: none;
+      width: 8.33333%; }
+    :local .small-block-grid-12 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .small-block-grid-12 > li:nth-of-type(12n+1) {
+      clear: both; } }
+  @media only screen and (min-width: 768px) {
+    :local .medium-block-grid-1 > li {
+      list-style: none;
+      width: 100%; }
+    :local .medium-block-grid-1 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-1 > li:nth-of-type(1n+1) {
+      clear: both; }
+    :local .medium-block-grid-2 > li {
+      list-style: none;
+      width: 50%; }
+    :local .medium-block-grid-2 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-2 > li:nth-of-type(2n+1) {
+      clear: both; }
+    :local .medium-block-grid-3 > li {
+      list-style: none;
+      width: 33.33333%; }
+    :local .medium-block-grid-3 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-3 > li:nth-of-type(3n+1) {
+      clear: both; }
+    :local .medium-block-grid-4 > li {
+      list-style: none;
+      width: 25%; }
+    :local .medium-block-grid-4 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-4 > li:nth-of-type(4n+1) {
+      clear: both; }
+    :local .medium-block-grid-5 > li {
+      list-style: none;
+      width: 20%; }
+    :local .medium-block-grid-5 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-5 > li:nth-of-type(5n+1) {
+      clear: both; }
+    :local .medium-block-grid-6 > li {
+      list-style: none;
+      width: 16.66667%; }
+    :local .medium-block-grid-6 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-6 > li:nth-of-type(6n+1) {
+      clear: both; }
+    :local .medium-block-grid-7 > li {
+      list-style: none;
+      width: 14.28571%; }
+    :local .medium-block-grid-7 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-7 > li:nth-of-type(7n+1) {
+      clear: both; }
+    :local .medium-block-grid-8 > li {
+      list-style: none;
+      width: 12.5%; }
+    :local .medium-block-grid-8 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-8 > li:nth-of-type(8n+1) {
+      clear: both; }
+    :local .medium-block-grid-9 > li {
+      list-style: none;
+      width: 11.11111%; }
+    :local .medium-block-grid-9 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-9 > li:nth-of-type(9n+1) {
+      clear: both; }
+    :local .medium-block-grid-10 > li {
+      list-style: none;
+      width: 10%; }
+    :local .medium-block-grid-10 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-10 > li:nth-of-type(10n+1) {
+      clear: both; }
+    :local .medium-block-grid-11 > li {
+      list-style: none;
+      width: 9.09091%; }
+    :local .medium-block-grid-11 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-11 > li:nth-of-type(11n+1) {
+      clear: both; }
+    :local .medium-block-grid-12 > li {
+      list-style: none;
+      width: 8.33333%; }
+    :local .medium-block-grid-12 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .medium-block-grid-12 > li:nth-of-type(12n+1) {
+      clear: both; } }
+  @media only screen and (min-width: 1025px) {
+    :local .large-block-grid-1 > li {
+      list-style: none;
+      width: 100%; }
+    :local .large-block-grid-1 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-1 > li:nth-of-type(1n+1) {
+      clear: both; }
+    :local .large-block-grid-2 > li {
+      list-style: none;
+      width: 50%; }
+    :local .large-block-grid-2 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-2 > li:nth-of-type(2n+1) {
+      clear: both; }
+    :local .large-block-grid-3 > li {
+      list-style: none;
+      width: 33.33333%; }
+    :local .large-block-grid-3 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-3 > li:nth-of-type(3n+1) {
+      clear: both; }
+    :local .large-block-grid-4 > li {
+      list-style: none;
+      width: 25%; }
+    :local .large-block-grid-4 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-4 > li:nth-of-type(4n+1) {
+      clear: both; }
+    :local .large-block-grid-5 > li {
+      list-style: none;
+      width: 20%; }
+    :local .large-block-grid-5 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-5 > li:nth-of-type(5n+1) {
+      clear: both; }
+    :local .large-block-grid-6 > li {
+      list-style: none;
+      width: 16.66667%; }
+    :local .large-block-grid-6 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-6 > li:nth-of-type(6n+1) {
+      clear: both; }
+    :local .large-block-grid-7 > li {
+      list-style: none;
+      width: 14.28571%; }
+    :local .large-block-grid-7 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-7 > li:nth-of-type(7n+1) {
+      clear: both; }
+    :local .large-block-grid-8 > li {
+      list-style: none;
+      width: 12.5%; }
+    :local .large-block-grid-8 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-8 > li:nth-of-type(8n+1) {
+      clear: both; }
+    :local .large-block-grid-9 > li {
+      list-style: none;
+      width: 11.11111%; }
+    :local .large-block-grid-9 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-9 > li:nth-of-type(9n+1) {
+      clear: both; }
+    :local .large-block-grid-10 > li {
+      list-style: none;
+      width: 10%; }
+    :local .large-block-grid-10 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-10 > li:nth-of-type(10n+1) {
+      clear: both; }
+    :local .large-block-grid-11 > li {
+      list-style: none;
+      width: 9.09091%; }
+    :local .large-block-grid-11 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-11 > li:nth-of-type(11n+1) {
+      clear: both; }
+    :local .large-block-grid-12 > li {
+      list-style: none;
+      width: 8.33333%; }
+    :local .large-block-grid-12 > li:nth-of-type(1n) {
+      clear: none; }
+    :local .large-block-grid-12 > li:nth-of-type(12n+1) {
+      clear: both; } }
+  @media print {
+    :local .print-1 {
+      width: 8.33333%; }
+    :local .print-2 {
+      width: 16.66667%; }
+    :local .print-3 {
+      width: 25%; }
+    :local .print-4 {
+      width: 33.33333%; }
+    :local .print-5 {
+      width: 41.66667%; }
+    :local .print-6 {
+      width: 50%; }
+    :local .print-7 {
+      width: 58.33333%; }
+    :local .print-8 {
+      width: 66.66667%; }
+    :local .print-9 {
+      width: 75%; }
+    :local .print-10 {
+      width: 83.33333%; }
+    :local .print-11 {
+      width: 91.66667%; }
+    :local .print-12 {
+      width: 100%; }
+    :local .print-offset-0 {
+      margin-left: 0% !important; }
+    :local .print-push-0 {
+      position: relative;
+      left: 0%;
+      right: auto; }
+    :local .print-pull-0 {
+      position: relative;
+      right: 0%;
+      left: auto; }
+    :local .print-offset-1 {
+      margin-left: 8.33333% !important; }
+    :local .print-push-1 {
+      position: relative;
+      left: 8.33333%;
+      right: auto; }
+    :local .print-pull-1 {
+      position: relative;
+      right: 8.33333%;
+      left: auto; }
+    :local .print-offset-2 {
+      margin-left: 16.66667% !important; }
+    :local .print-push-2 {
+      position: relative;
+      left: 16.66667%;
+      right: auto; }
+    :local .print-pull-2 {
+      position: relative;
+      right: 16.66667%;
+      left: auto; }
+    :local .print-offset-3 {
+      margin-left: 25% !important; }
+    :local .print-push-3 {
+      position: relative;
+      left: 25%;
+      right: auto; }
+    :local .print-pull-3 {
+      position: relative;
+      right: 25%;
+      left: auto; }
+    :local .print-offset-4 {
+      margin-left: 33.33333% !important; }
+    :local .print-push-4 {
+      position: relative;
+      left: 33.33333%;
+      right: auto; }
+    :local .print-pull-4 {
+      position: relative;
+      right: 33.33333%;
+      left: auto; }
+    :local .print-offset-5 {
+      margin-left: 41.66667% !important; }
+    :local .print-push-5 {
+      position: relative;
+      left: 41.66667%;
+      right: auto; }
+    :local .print-pull-5 {
+      position: relative;
+      right: 41.66667%;
+      left: auto; }
+    :local .print-offset-6 {
+      margin-left: 50% !important; }
+    :local .print-push-6 {
+      position: relative;
+      left: 50%;
+      right: auto; }
+    :local .print-pull-6 {
+      position: relative;
+      right: 50%;
+      left: auto; }
+    :local .print-offset-7 {
+      margin-left: 58.33333% !important; }
+    :local .print-push-7 {
+      position: relative;
+      left: 58.33333%;
+      right: auto; }
+    :local .print-pull-7 {
+      position: relative;
+      right: 58.33333%;
+      left: auto; }
+    :local .print-offset-8 {
+      margin-left: 66.66667% !important; }
+    :local .print-push-8 {
+      position: relative;
+      left: 66.66667%;
+      right: auto; }
+    :local .print-pull-8 {
+      position: relative;
+      right: 66.66667%;
+      left: auto; }
+    :local .print-offset-9 {
+      margin-left: 75% !important; }
+    :local .print-push-9 {
+      position: relative;
+      left: 75%;
+      right: auto; }
+    :local .print-pull-9 {
+      position: relative;
+      right: 75%;
+      left: auto; }
+    :local .print-offset-10 {
+      margin-left: 83.33333% !important; }
+    :local .print-push-10 {
+      position: relative;
+      left: 83.33333%;
+      right: auto; }
+    :local .print-pull-10 {
+      position: relative;
+      right: 83.33333%;
+      left: auto; }
+    :local .print-offset-11 {
+      margin-left: 91.66667% !important; }
+    :local .print-push-11 {
+      position: relative;
+      left: 91.66667%;
+      right: auto; }
+    :local .print-pull-11 {
+      position: relative;
+      right: 91.66667%;
+      left: auto; } }

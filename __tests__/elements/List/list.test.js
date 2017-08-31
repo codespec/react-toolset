@@ -1,5 +1,5 @@
 import React from 'react'
-import { List } from '../../../index.js'
+import { List } from '../../../src'
 
 describe('<List />', () => {
   it('should render List component', () => {

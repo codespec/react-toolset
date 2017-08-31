@@ -1,0 +1,301 @@
+:global html {
+  font-family: sans-serif;
+  text-size-adjust: 100%; }
+
+:global body {
+  margin: 0; }
+
+:global article,
+:global aside,
+:global details,
+:global figcaption,
+:global figure,
+:global footer,
+:global header,
+:global hgroup,
+:global main,
+:global nav,
+:global section,
+:global summary {
+  display: block; }
+
+:global audio,
+:global canvas,
+:global progress,
+:global video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+:global audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+:global [hidden],
+:global template {
+  display: none; }
+
+:global a {
+  background: transparent; }
+
+:global a:active,
+:global a:hover {
+  outline: 0; }
+
+:global abbr[title] {
+  border-bottom: 1px dotted; }
+
+:global b,
+:global strong {
+  font-weight: bold; }
+
+:global dfn {
+  font-style: italic; }
+
+:global h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+:global mark {
+  background: #ff0;
+  color: #000; }
+
+:global small {
+  font-size: 80%; }
+
+:global sub,
+:global sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+:global sup {
+  top: -0.5em; }
+
+:global sub {
+  bottom: -0.25em; }
+
+:global img {
+  border: 0; }
+
+:global svg:not(:root) {
+  overflow: hidden; }
+
+:global figure {
+  margin: 1em 40px; }
+
+:global hr {
+  box-sizing: content-box;
+  height: 0; }
+
+:global pre {
+  overflow: auto; }
+
+:global code,
+:global kbd,
+:global pre,
+:global samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+:global button,
+:global input,
+:global optgroup,
+:global select,
+:global textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+:global button {
+  overflow: visible; }
+
+:global button,
+:global select {
+  text-transform: none; }
+
+:global button,
+:global html input[type="button"],
+:global input[type="reset"],
+:global input[type="submit"] {
+  appearance: button;
+  cursor: pointer; }
+
+:global button[disabled],
+:global html input[disabled] {
+  cursor: default; }
+
+:global button::-moz-focus-inner,
+:global input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+:global input {
+  line-height: normal; }
+
+:global input[type="checkbox"],
+:global input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+:global input[type="number"]::-webkit-inner-spin-button,
+:global input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+:global input[type="search"] {
+  box-sizing: content-box; }
+
+:global input[type="search"]::-webkit-search-cancel-button,
+:global input[type="search"]::-webkit-search-decoration {
+  appearance: none; }
+
+:global fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+:global legend {
+  border: 0;
+  padding: 0; }
+
+:global textarea {
+  overflow: auto; }
+
+:global optgroup {
+  font-weight: bold; }
+
+:global table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+:global td,
+:global th {
+  padding: 0; }
+
+:global html {
+  height: 100%;
+  box-sizing: border-box; }
+
+:global *,
+:global *::before,
+:global *::after {
+  box-sizing: inherit; }
+
+:global body {
+  height: 100%;
+  background-color: #fff;
+  color: #33334b;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.3; }
+
+:global hr {
+  height: 1px;
+  margin: 0;
+  background-color: #e6e6e9;
+  border: 0; }
+
+:global a {
+  text-decoration: none;
+  font-family: sans-serif;
+  cursor: pointer; }
+
+:global a,
+:global .primary {
+  color: #0098ee; }
+  :global a:focus, :global a:hover, :global a:active,
+  :global .primary:focus,
+  :global .primary:hover,
+  :global .primary:active {
+    color: #32b8ff;
+    text-decoration: none; }
+  :global a:visited,
+  :global .primary:visited {
+    color: #0098ee; }
+    :global a:visited:hover,
+    :global .primary:visited:hover {
+      color: #32b8ff; }
+
+:global .link-dark,
+:global .role-dark {
+  color: #33334b; }
+  :global .link-dark:focus, :global .link-dark:hover, :global .link-dark:active,
+  :global .role-dark:focus,
+  :global .role-dark:hover,
+  :global .role-dark:active {
+    color: #9999a5;
+    text-decoration: underline; }
+  :global .link-dark:visited,
+  :global .role-dark:visited {
+    color: #33334b; }
+    :global .link-dark:visited:hover,
+    :global .role-dark:visited:hover {
+      color: #9999a5; }
+
+:global .link-light,
+:global .role-light {
+  color: #fff; }
+  :global .link-light:focus, :global .link-light:hover, :global .link-light:active,
+  :global .role-light:focus,
+  :global .role-light:hover,
+  :global .role-light:active {
+    color: #fff;
+    text-decoration: underline; }
+  :global .link-light:visited,
+  :global .role-light:visited {
+    color: #fff; }
+    :global .link-light:visited:hover,
+    :global .role-light:visited:hover {
+      color: #fff; }
+
+:global h1,
+:global h2,
+:global h3,
+:global h4 {
+  margin: 0;
+  color: inherit;
+  text-transform: none; }
+
+:global h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: bold;
+  letter-spacing: normal; }
+
+:global h2 {
+  font-size: 2.25rem;
+  line-height: 1.3;
+  font-weight: bold;
+  letter-spacing: normal; }
+
+:global h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: bold;
+  letter-spacing: normal; }
+
+:global h4 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: bold;
+  letter-spacing: normal; }
+
+:global p {
+  margin: 0 0 12px; }
+
+:global .paragraph-loose {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  line-height: 1.3; }
+
+:global .text-subtle {
+  color: #9999a5; }
+
+:global .text-footnote {
+  color: #9999a5;
+  font-size: 0.75rem;
+  line-height: 1.3; }
+
+:global .text-error {
+  color: #d10202; }
