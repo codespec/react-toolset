@@ -9,6 +9,8 @@ const replace = require('gulp-replace')
 gulp.task('js', function() {
   return gulp.src([
     './src/**/*.jsx',
+    './src/**/*.js',
+    '!./src/index.js'
   ])
   .pipe(replace('scss', 'css'))
   .pipe(plumber())
