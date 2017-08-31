@@ -12,7 +12,7 @@ Independent set of React UI Components for your application.
 
 </div>
 
-### Install
+## Install
 
 ```sh
 # npm users
@@ -22,15 +22,22 @@ $ npm i --save @codespec/react-toolset
 $ yarn add @codespec/react-toolset
 ```
 
-### Documentation
+## Documentation
 
 - <a href="https://codespec.github.io/react-toolset/docs/" target="_blank">https://codespec.github.io/react-toolset/docs/</a>
 
-### How to use
+## How to use
 
-#### When using not complied source
+### When using compiled source
+
+  ```js
+  import { Button } from '@codespec/react-toolset'
+  ```
+
+### When using not complied source
 
 1. Set up Webpack configuration
+
   ```js
   // Add this loaders in your webpack.config.js
   // You should not exclude node_modules directory from it.
@@ -67,13 +74,14 @@ $ yarn add @codespec/react-toolset
     ]
   }
   ```
+
 2. Import individual component from your application
 
   ```jsx
   import { Button } from '@codespec/react-toolset/src'
   ```
 
-If you are using `create-react-app`, use need to follow this.
+### If you are using `create-react-app`, use need to follow this.
 
 1. Eject your predefined configuration
 
@@ -100,11 +108,3 @@ If you are using `create-react-app`, use need to follow this.
   ```
 
 3. Configure SCSS as above
-
-#### When using compiled source
-
-1. Import a component from your application like as below
-
-  ```js
-  import { Button } from '@codespec/react-toolset'
-  ```
