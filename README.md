@@ -28,7 +28,7 @@ $ yarn add @codespec/react-toolset
 
 ### How to use
 
-Since this react-toolset library is not compiling production package, you need to set up more things.
+#### When using not complied source
 
 1. Set up Webpack configuration
   ```js
@@ -70,7 +70,7 @@ Since this react-toolset library is not compiling production package, you need t
 2. Import individual component from your application
 
   ```jsx
-  import { Button } from '@codespec/react-toolset'
+  import { Button } from '@codespec/react-toolset/src'
   ```
 
 If you are using `create-react-app`, use need to follow this.
@@ -100,3 +100,11 @@ If you are using `create-react-app`, use need to follow this.
   ```
 
 3. Configure SCSS as above
+
+#### When using compiled source
+
+1. Import a component from your application like as below
+
+  ```js
+  import { Button } from '@codespec/react-toolset'
+  ```

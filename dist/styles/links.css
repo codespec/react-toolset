@@ -1,0 +1,52 @@
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+  cursor: pointer; }
+
+a,
+.primary {
+  color: #0098ee; }
+  a:focus, a:hover, a:active,
+  .primary:focus,
+  .primary:hover,
+  .primary:active {
+    color: #32b8ff;
+    text-decoration: none; }
+  a:visited,
+  .primary:visited {
+    color: #0098ee; }
+    a:visited:hover,
+    .primary:visited:hover {
+      color: #32b8ff; }
+
+.link-dark,
+.role-dark {
+  color: #33334b; }
+  .link-dark:focus, .link-dark:hover, .link-dark:active,
+  .role-dark:focus,
+  .role-dark:hover,
+  .role-dark:active {
+    color: #9999a5;
+    text-decoration: underline; }
+  .link-dark:visited,
+  .role-dark:visited {
+    color: #33334b; }
+    .link-dark:visited:hover,
+    .role-dark:visited:hover {
+      color: #9999a5; }
+
+.link-light,
+.role-light {
+  color: #fff; }
+  .link-light:focus, .link-light:hover, .link-light:active,
+  .role-light:focus,
+  .role-light:hover,
+  .role-light:active {
+    color: #fff;
+    text-decoration: underline; }
+  .link-light:visited,
+  .role-light:visited {
+    color: #fff; }
+    .link-light:visited:hover,
+    .role-light:visited:hover {
+      color: #fff; }

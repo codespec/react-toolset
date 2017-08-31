@@ -1,19 +1,19 @@
 // icons
-import Icon from './src/icons/Icon'
+import Icon from './dist/icons/Icon'
 
 // Elements
-import Button from './src/elements/Button'
-import Input from './src/elements/Input'
-import List from './src/elements/List'
-import ListItem from './src/elements/List/ListItem'
-import Checkbox from './src/elements/Checkbox'
+import Button from './dist/elements/Button'
+import Input from './dist/elements/Input'
+import List from './dist/elements/List'
+import ListItem from './dist/elements/List/ListItem'
+import Checkbox from './dist/elements/Checkbox'
 
 // components
-import Breadcrumb from './src/components/Breadcrumb'
+import Breadcrumb from './dist/components/Breadcrumb'
 
 // Layouts
-import Column from './src/layouts/Grid/Column'
-import Row from './src/layouts/Grid/Row'
+import Column from './dist/layouts/Grid/Column'
+import Row from './dist/layouts/Grid/Row'
 
 export {
   Icon,

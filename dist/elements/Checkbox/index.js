@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/bind'
 import Icon from '../../icons/Icon'
-import style from './style.scss'
+import style from './style.css'
 
 const classNames = cx.bind(style)
 
@@ -39,16 +39,16 @@ const Checkbox = ({
   if (type === 'dark') iconProps.color = '#fff'
 
   return (
-    <label htmlFor={id} className={labelClass}>
-      <input
-        className={classNames('Checkbox__native')}
-        type="checkbox"
-        id={id}
-        checked={isChecked}
-        onChange={onChange}
-        disabled={isDisabled}
-      />
-      <span className={classNames(
+    React.createElement("label", {htmlFor: id, className: labelClass}, 
+      React.createElement("input", {
+        className: classNames('Checkbox__native'), 
+        type: "checkbox", 
+        id: id, 
+        checked: isChecked, 
+        onChange: onChange, 
+        disabled: isDisabled}
+      ), 
+      React.createElement("span", {className: classNames(
         'Checkbox__box',
         {
           'Checkbox__box--checked': isChecked && type !== 'dark',
@@ -58,27 +58,27 @@ const Checkbox = ({
           [`Checkbox__box--${size}`]: true,
         },
         className.box
-      )}>
-        { isChecked && <span className={classNames(
+      )}, 
+         isChecked && React.createElement("span", {className: classNames(
           'Checkbox__checkmark',
           {
             [`Checkbox__checkmark--${size}`]: true,
           }
-        )} >
-          <Icon {...iconProps} />
-        </span>}
-      </span>
-      <span className={classNames(
+        )}, 
+          React.createElement(Icon, React.__spread({},  iconProps))
+        )
+      ), 
+      React.createElement("span", {className: classNames(
         'Checkbox__label',
         {
           'Checkbox__label--disabled': isDisabled,
           [`Checkbox__label--${size}`]: true,
         },
         className.labelText
-      )}>
-        {props.children}
-      </span>
-    </label>
+      )}, 
+        props.children
+      )
+    )
   )
 }
 

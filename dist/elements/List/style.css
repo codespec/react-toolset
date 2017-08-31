@@ -1,0 +1,54 @@
+:local .List {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+  :local .List > li {
+    margin-bottom: 9px; }
+
+:local .List-instruction {
+  list-style-type: decimal;
+  list-style-position: inside;
+  counter-reset: li; }
+  :local .List-instruction > li {
+    position: relative;
+    list-style: none;
+    padding: 0 0 12px 30px; }
+    :local .List-instruction > li::before {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 21px;
+      height: 21px;
+      border: 2px solid #33334b;
+      border-radius: 10000px;
+      color: #33334b;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: bold;
+      text-align: center;
+      content: counter(li);
+      counter-increment: li; }
+
+:local .List-bullet {
+  padding-left: 24px;
+  list-style: disc; }
+  :local .List-bullet > li {
+    margin-bottom: 9px; }
+
+:local .List-horizontal > li {
+  display: inline-block;
+  margin-right: 9px; }
+  :local .List-horizontal > li:last-child {
+    margin-right: 0; }
+
+:local .List-pipe > li {
+  display: inline-block;
+  padding: 0 9px;
+  border-right: 1px solid #33334b;
+  line-height: 14px; }
+  :local .List-pipe > li:first-child {
+    padding-left: 0; }
+  :local .List-pipe > li:last-child {
+    padding-right: 0;
+    border-right: 0; }

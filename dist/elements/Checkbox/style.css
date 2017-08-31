@@ -1,0 +1,105 @@
+:local .Checkbox {
+  display: block;
+  cursor: pointer;
+  white-space: nowrap; }
+
+:local .Checkbox__box {
+  border-radius: 0;
+  border: 1px solid #00142b;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 6px; }
+
+:local not(.Checkbox--disabled):active .Checkbox__box {
+  background-color: #f2f2f2; }
+
+:local .Checkbox--checked:not(.Checkbox--disabled):active .Checkbox__box {
+  background-color: #f2f2f2; }
+
+:local .Checkbox--disabled {
+  cursor: auto; }
+
+:local .Checkbox__box--disabled {
+  border: 1px solid #e6e6e9;
+  cursor: auto; }
+
+:local .Checkbox__label--disabled {
+  color: #9999a5; }
+
+:local .Checkbox__box--small {
+  height: 18px;
+  width: 18px; }
+
+:local .Checkbox__checkmark--small {
+  position: absolute;
+  left: 1px;
+  top: 1px; }
+
+:local .Checkbox__label--small {
+  line-height: 18px; }
+
+:local .Checkbox__box--medium {
+  height: 24px;
+  width: 24px; }
+
+:local .Checkbox__checkmark--medium {
+  position: absolute;
+  left: 1px;
+  top: 1px; }
+
+:local .Checkbox__label--large {
+  line-height: 36px; }
+
+:local .Checkbox__box--large {
+  height: 36px;
+  width: 36px; }
+
+:local .Checkbox__checkmark--large {
+  position: absolute;
+  left: 1px;
+  top: 1px; }
+
+:local .Checkbox__label--xlarge {
+  line-height: 48px; }
+
+:local .Checkbox__box--xlarge {
+  height: 48px;
+  width: 48px; }
+
+:local .Checkbox__checkmark--xlarge {
+  position: absolute;
+  left: 0.5px;
+  top: 0.5px; }
+
+:local .Checkbox__label--medium {
+  line-height: 24px; }
+
+:local .Checkbox__box--checked {
+  background: #fff;
+  border: 1px solid #00142b;
+  color: #00142b; }
+
+:local .Checkbox__box--checked-dark {
+  background: #00142b;
+  border: 1px solid #00142b;
+  color: #fff; }
+
+:local .Checkbox__box--checked--disabled {
+  background: inherit;
+  border: 1px solid #e6e6e9;
+  color: #9999a5; }
+
+:local .Checkbox__native {
+  margin: 0;
+  opacity: 0;
+  width: 0; }
+
+:local .Checkbox__label {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal; }
