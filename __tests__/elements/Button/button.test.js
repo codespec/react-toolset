@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../index.js'
+import { Button } from '../../../src'
 
 describe('<Button />', () => {
   it('should render Button component', () => {

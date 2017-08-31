@@ -2,7 +2,7 @@
 const path = require('path')
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
-const react = require('gulp-react')
+const babel = require('gulp-babel')
 const sass = require('gulp-sass')
 const replace = require('gulp-replace')
 
@@ -12,7 +12,7 @@ gulp.task('js', function() {
   ])
   .pipe(replace('scss', 'css'))
   .pipe(plumber())
-  .pipe(react({harmony: false, es6module: true}))
+  .pipe(babel())
   .pipe(gulp.dest('dist'))
 })
 

@@ -1,34 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames/bind'
-import style from './style.css'
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const classNames = cx.bind(style)
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames/bind';
+import style from './style.css';
 
-const List = ({ type, className, children, ...props }) => {
+var classNames = cx.bind(style);
+
+var List = function List(_ref) {
+  var type = _ref.type,
+      className = _ref.className,
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ['type', 'className', 'children']);
+
   if (type === 'instruction') {
-    return (
-      React.createElement("ol", React.__spread({className: classNames('List', `List-${type}`, className)},  props), 
-        children
-      )
-    )
-  }
-  return (
-    React.createElement("ul", React.__spread({className: classNames('List', `List-${type}`, className)},  props), 
+    return React.createElement(
+      'ol',
+      Object.assign({ className: classNames('List', 'List-' + type, className) }, props),
       children
-    )
-  )
-}
+    );
+  }
+  return React.createElement(
+    'ul',
+    Object.assign({ className: classNames('List', 'List-' + type, className) }, props),
+    children
+  );
+};
 
 List.propTypes = {
   type: PropTypes.oneOf(['vertical', 'instruction', 'bullet', 'horizontal', 'pipe']),
   className: PropTypes.string,
-  children: PropTypes.node,
-}
+  children: PropTypes.node
+};
 
 List.defaultProps = {
   type: 'vertical',
-  children: React.createElement("div", null),
-}
+  children: React.createElement('div', null)
+};
 
-export default List
+export default List;

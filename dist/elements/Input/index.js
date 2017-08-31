@@ -1,22 +1,37 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames/bind'
-import { form as formCls } from '../../styles'
+var _this = this;
 
-const classNames = cx.bind(formCls)
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const Input = ({ id, label, className, ...props }) => (
-  React.createElement("div", {className: classNames('form-fields-container', className.root)}, 
-    label && (React.createElement("label", {htmlFor: id, className: classNames('label', className.label)}, 
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames/bind';
+import { form as formCls } from '../../styles';
+
+var classNames = cx.bind(formCls);
+
+var Input = function Input(_ref) {
+  var id = _ref.id,
+      label = _ref.label,
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ['id', 'label', 'className']);
+
+  return React.createElement(
+    'div',
+    { className: classNames('form-fields-container', className.root) },
+    label && React.createElement(
+      'label',
+      { htmlFor: id, className: classNames('label', className.label) },
       label
-    )), 
-    React.createElement("input", React.__spread({
-      id: id, 
-      className: classNames('input', className.input)}, 
-      props, 
-      {ref: (element) => { this.input = element }}))
-  )
-)
+    ),
+    React.createElement('input', Object.assign({
+      id: id,
+      className: classNames('input', className.input)
+    }, props, {
+      ref: function ref(element) {
+        _this.input = element;
+      } }))
+  );
+};
 
 Input.propTypes = {
   /** Input id to be used in lable accessibility */
@@ -32,12 +47,12 @@ Input.propTypes = {
     /** Style for lable element */
     label: PropTypes.string,
     /** Style for input element */
-    input: PropTypes.string,
-  }),
-}
+    input: PropTypes.string
+  })
+};
 
 Input.defaultProps = {
-  className: {},
-}
+  className: {}
+};
 
-export default Input
+export default Input;

@@ -1,32 +1,33 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames/bind'
-import '../../styles/react-toolset.css'
-import { button as buttonCls } from '../../styles'
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const classNames = cx.bind(buttonCls)
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames/bind';
+import '../../styles/react-toolset.css';
+import { button as buttonCls } from '../../styles';
 
-const Button = ({
-  role,
-  size,
-  tag,
-  isStretched,
-  isSelected,
-  link,
-  isFlat,
-  className,
-  children,
-  ...props
-}) => {
-  const tagName = link ? 'a' : (tag || 'button')
-  const style = isFlat ? 'flat' : 'rounded'
+var classNames = cx.bind(buttonCls);
 
-  return React.createElement(tagName, {
-    href: (link || null),
-    className: classNames('Button', `Button-${role}`, `Button-${size}`, `Button-is-${style}`, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className),
-    ...props,
-  }, children)
-}
+var Button = function Button(_ref) {
+  var role = _ref.role,
+      size = _ref.size,
+      tag = _ref.tag,
+      isStretched = _ref.isStretched,
+      isSelected = _ref.isSelected,
+      link = _ref.link,
+      isFlat = _ref.isFlat,
+      className = _ref.className,
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ['role', 'size', 'tag', 'isStretched', 'isSelected', 'link', 'isFlat', 'className', 'children']);
+
+  var tagName = link ? 'a' : tag || 'button';
+  var style = isFlat ? 'flat' : 'rounded';
+
+  return React.createElement(tagName, Object.assign({
+    href: link || null,
+    className: classNames('Button', 'Button-' + role, 'Button-' + size, 'Button-is-' + style, { 'Button-is-stretched': isStretched }, { 'Button-is-selected': isSelected }, className)
+  }, props), children);
+};
 
 Button.propTypes = {
   role: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error', 'info', 'default']),
@@ -43,15 +44,15 @@ Button.propTypes = {
   /** Name of extra class to apply to the root element */
   className: PropTypes.string,
   /** Button label. */
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
 Button.defaultProps = {
   role: 'default',
   size: 'medium',
   tag: 'button',
   isStretched: false,
-  isFlat: false,
-}
+  isFlat: false
+};
 
-export default Button
+export default Button;

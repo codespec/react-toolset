@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input } from '../../../index.js'
+import { Input } from '../../../src'
 
 describe('<Input />', () => {
   it('should render Input component', () => {

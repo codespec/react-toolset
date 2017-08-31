@@ -1,5 +1,5 @@
 import React from 'react'
-import { Checkbox } from '../../../index.js'
+import { Checkbox } from '../../../src'
 
 describe('<Checkbox />', () => {
   it('should render Checkbox component', () => {

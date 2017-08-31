@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Column } from '../../../index.js'
+import { Row, Column } from '../../../src'
 
 describe('<Row />', () => {
   it('should render Row component', () => {

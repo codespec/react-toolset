@@ -123,7 +123,6 @@
     "gulp-babel": "^7.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
-    "gulp-react": "^3.1.0",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "html-webpack-plugin": "2.29.0",
