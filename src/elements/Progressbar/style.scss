@@ -1,0 +1,57 @@
+:local {
+  @import '../../styles/config';
+
+  .Progressbar {
+    background-color: $color-gray-light;
+    border-radius: $progress-bar-radius;
+  }
+
+  .Progressbar--flat {
+    border-radius: 0;
+  }
+
+  .Progressbar__progress {
+    text-align: center;
+    vertical-align: middle;
+    height: $progress-bar-base-height;
+    font-size: $progress-bar-base-height - 3px;
+    line-height: $progress-bar-base-height;
+    color: $color-white;
+    background-color: $color-primary;
+    border-top-left-radius: $progress-bar-radius;
+    border-bottom-left-radius: $progress-bar-radius;
+  }
+
+  .Progressbar__progress--large {
+    height: $progress-bar-base-height + $unit;
+    font-size: $progress-bar-base-height + $unit - 3px;
+    line-height: $progress-bar-base-height + $unit;
+  }
+
+  .Progressbar__progress--small {
+    height: $progress-bar-base-height - $unit/2;
+    font-size: $progress-bar-base-height - $unit/2 - 1px;
+    line-height: $progress-bar-base-height - $unit/2;
+  }
+
+  .Progressbar__progress--flat {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .Progressbar__progress--primary {
+    background-color: $color-primary;
+  }
+
+  .Progressbar__progress--success {
+    background-color: $color-success;
+  }
+
+  .Progressbar__progress--warning {
+    background-color: $color-warning;
+  }
+
+  .Progressbar__progress--error {
+    background-color: $color-error;
+  }
+}
