@@ -6,6 +6,15 @@ $ npm install
 $ npm run docs
 ```
 
+## Creating pull requests
+
+Before creating pull request please follow these steps.
+
+```sh
+$ yarn run docs:build
+$ yarn run build
+```
+
 ## Component files structure
 ```
 react-toolset/

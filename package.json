@@ -1,6 +1,6 @@
 {
   "name": "@codespec/react-toolset",
-  "version": "0.0.31",
+  "version": "0.0.33",
   "keywords": [
     "React",
     "Components",
@@ -34,13 +34,12 @@
     "style-loader": "0.18.2"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "styleguidist server",
     "build": "cross-env NODE_ENV=production gulp",
     "build:old": "node scripts/build.js",
     "prebuild": "rimraf ./dist",
     "eslint": "./node_modules/.bin/eslint src --ext .jsx --ext .js",
     "test": "node scripts/test.js --env=jsdom --coverage",
-    "docs": "styleguidist server",
     "docs:build": "styleguidist build"
   },
   "jest": {
