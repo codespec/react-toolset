@@ -10,6 +10,7 @@ import Checkbox from './dist/elements/Checkbox'
 
 // components
 import Breadcrumb from './dist/components/Breadcrumb'
+import Progressbar from './dist/components/Progressbar'
 
 // Layouts
 import Column from './dist/layouts/Grid/Column'
@@ -25,6 +26,7 @@ export {
   Checkbox,
 
   Breadcrumb,
+  Progressbar,
 
   Column,
   Row,

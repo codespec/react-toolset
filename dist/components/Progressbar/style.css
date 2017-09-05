@@ -1,0 +1,43 @@
+:local .Progressbar {
+  background-color: #e6e6e9;
+  border-radius: 30px; }
+
+:local .Progressbar--flat {
+  border-radius: 0; }
+
+:local .Progressbar__progress {
+  text-align: center;
+  vertical-align: middle;
+  height: 13px;
+  font-size: 10px;
+  line-height: 13px;
+  color: #fff;
+  background-color: #00142b;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px; }
+
+:local .Progressbar__progress--large {
+  height: 19px;
+  font-size: 16px;
+  line-height: 19px; }
+
+:local .Progressbar__progress--small {
+  height: 10px;
+  font-size: 9px;
+  line-height: 10px; }
+
+:local .Progressbar__progress--flat {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+:local .Progressbar__progress--primary {
+  background-color: #00142b; }
+
+:local .Progressbar__progress--success {
+  background-color: #32bf00; }
+
+:local .Progressbar__progress--warning {
+  background-color: #ffb600; }
+
+:local .Progressbar__progress--error {
+  background-color: #d10202; }
