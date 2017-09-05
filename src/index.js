@@ -7,10 +7,10 @@ import Input from './elements/Input'
 import List from './elements/List'
 import ListItem from './elements/List/ListItem'
 import Checkbox from './elements/Checkbox'
-import Progressbar from './elements/Progressbar'
 
 // components
 import Breadcrumb from './components/Breadcrumb'
+import Progressbar from './components/Progressbar'
 
 // Layouts
 import Column from './layouts/Grid/Column'
