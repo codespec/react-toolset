@@ -331,6 +331,10 @@ $styled-choice-selected-text-color: $color-white !default;
 $styled-choice-control-color: #bebebe !default;
 $styled-choice-control-checked-color: $color-white !default;
 
+// ----- Progressbar ------
+$progress-bar-base-height: 13px;
+$progress-bar-radius: 5 * $unit;
+
 // ----- icon dimension -----
 $icon-dimension-small: 14px !default;
 $icon-dimension-medium: 20px !default;
