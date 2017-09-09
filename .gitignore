@@ -66,6 +66,3 @@ typings/
 
 # snapshots
 __snapshots__
-
-# package-lock
-package-lock.json
