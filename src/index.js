@@ -11,6 +11,7 @@ import Checkbox from './elements/Checkbox'
 // components
 import Breadcrumb from './components/Breadcrumb'
 import Progressbar from './components/Progressbar'
+import Pagination from './components/Pagination'
 
 // Layouts
 import Column from './layouts/Grid/Column'
@@ -24,9 +25,10 @@ export {
   List,
   ListItem,
   Checkbox,
-  Progressbar,
 
   Breadcrumb,
+  Progressbar,
+  Pagination,
 
   Column,
   Row,
