@@ -340,3 +340,14 @@ $icon-dimension-small: 14px !default;
 $icon-dimension-medium: 20px !default;
 $icon-dimension-large: 32px !default;
 $icon-dimension-xlarge: 45px !default;
+
+// ----- menu buttons -----
+$menu-padding: (2 * $unit) 0 !default;
+$menu-background: $color-gray-off-white !default;
+$menu-border: $button-border-width solid $border-color-medium !default;
+
+$menu-item-padding: 0 (2 * $unit) !default;
+$menu-item-line-height: map-get($font-size-body, line-height) !default;
+$menu-item-text-color: $color-gray-dark !default;
+$menu-item-hover-background: $color-gray-dark !default;
+$menu-item-hover-text-color: $color-gray-off-white !default;

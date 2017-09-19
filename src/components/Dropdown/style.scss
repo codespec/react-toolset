@@ -1,0 +1,107 @@
+@import '../../styles/buttons';
+
+:local {
+  @import '../../styles/config';
+
+  .Dropdown {
+    outline: none;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .Dropdown__button {
+    display: block;
+    box-sizing: border-box;
+    width: inherit;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+  }
+
+  .Dropdown__label {
+    display: block;
+    padding: $button-padding-vert;
+  }
+
+  .Dropdown-open {
+    position: relative;
+    background-color: $menu-background;
+    background-image: none;
+    filter: none;
+    border-bottom: 0;
+    color: $menu-item-text-color;
+    z-index: map-get($z-indicies, dropdown-button-is-open);
+  }
+
+  .button__icon {
+    position: absolute;
+    right: 2 * $unit;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .Dropdown__container {
+    overflow-y: auto;
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    min-width: 100%;
+    margin-top: -($button-border-width);
+    right: -($button-border-width);
+    left: -($button-border-width);
+    background-color: $menu-background;
+    border: $menu-border;
+    border-top: 0;
+    text-align: left;
+    z-index: map-get($z-indicies, dropdown-menu);
+  }
+
+  .Dropdown__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Dropdown__option {
+    margin: 0;
+    padding: 2 * $unit;
+    list-style: none;
+    color: $menu-item-text-color;
+    font-size: map-get($button-text-size-map, font-size);
+    line-height: $menu-item-line-height;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $menu-item-hover-background;
+      color: $menu-item-hover-text-color;
+      text-decoration: none;
+    }
+
+    &.Dropdown__option-current {
+      background-color: $menu-item-hover-background;
+      color: $menu-item-hover-text-color;
+    }
+
+    > a,
+    > label {
+      display: block;
+      color: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  .Dropdown__divider {
+    height: 0;
+    width: auto;
+    padding: $menu-item-padding;
+    list-style: none;
+    color: $menu-item-text-color;
+    font-size: map-get($button-text-size-map, font-size);
+    line-height: $menu-item-line-height;
+    white-space: nowrap;
+    border-top: $menu-border;
+  }
+}
