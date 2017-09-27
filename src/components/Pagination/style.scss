@@ -1,0 +1,23 @@
+:local {
+  @import '../../styles/config';
+
+  .Pagination {
+    font-size: $pagination-font-medium;
+  }
+
+  .Pagination--large {
+    font-size: $pagination-font-large;
+  }
+
+  .Pagination__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Pagination__caret {
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+}

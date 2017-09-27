@@ -1,4 +1,7 @@
 {
+  # Fix using ES6 static property error.
+  # https://stackoverflow.com/questions/44619794/eslint-parsing-error-unexpected-token
+  "parser": "babel-eslint",
   "extends": "airbnb",
   "env": {
     "browser": true,
