@@ -1,6 +1,4 @@
 :global {
-  @import './config';
-
   html {
     height: 100%;
     box-sizing: border-box;
@@ -10,21 +8,5 @@
   *::before,
   *::after {
     box-sizing: inherit;
-  }
-
-  body {
-    height: 100%;
-    background-color: $color-white;
-    color: $color-body;
-    font-family: $font-family;
-    font-weight: $font-weight-body;
-    @include fontSize($font-size-body);
-  }
-
-  hr {
-   height: 1px;
-   margin: 0;
-   background-color: $color-gray-light;
-   border: 0;
   }
 }
