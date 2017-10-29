@@ -16,7 +16,7 @@ const Label = (props) => {
 }
 
 Label.propTypes = {
-  /** Set Label for attribute */
+  /** Set Label for other component */
   htmlFor: PropTypes.string,
   /** Specify whether it is required field */
   required: PropTypes.bool,
