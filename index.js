@@ -7,6 +7,7 @@ import Input from './dist/elements/Input'
 import List from './dist/elements/List'
 import ListItem from './dist/elements/List/ListItem'
 import Checkbox from './dist/elements/Checkbox'
+import Label from './dist/elements/Label'
 
 // components
 import Breadcrumb from './dist/components/Breadcrumb'
@@ -25,6 +26,7 @@ export {
   List,
   ListItem,
   Checkbox,
+  Label,
 
   Breadcrumb,
   Progressbar,
