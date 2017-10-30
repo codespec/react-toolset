@@ -10,7 +10,7 @@ import { Label } from '@codespec/react-toolset'
 
 ### Required Field Label
 ```js
-<Label required={true}>
+<Label required>
   Required Label:
 </Label>
 ```
@@ -18,7 +18,7 @@ import { Label } from '@codespec/react-toolset'
 ### Label For
 ```js
 <div>
-  <Label htmlFor="simple-button">
+  <Label labelTo="simple-button">
     Label For:
     <Button id="simple-button">Simple Button</Button>
   </Label>
