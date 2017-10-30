@@ -1,6 +1,6 @@
 {
   "name": "@codespec/react-toolset",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "keywords": [
     "React",
     "Components",
@@ -23,6 +23,7 @@
     "babel-runtime": "6.23.0",
     "classnames": "^2.2.5",
     "css-loader": "0.28.4",
+    "jest-cli": "21.2.1",
     "node-sass": "^4.5.3",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",

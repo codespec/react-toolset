@@ -1,0 +1,15 @@
+:local {
+  @import '../../styles/config';
+
+  .Label {
+    margin: 0 $unit;
+  }
+
+  .Label--isRequired {
+    &::before {
+      content: "*";
+      margin-right: $label-required-icon-spacing;
+      color: $color-error;
+    }
+  }
+}
