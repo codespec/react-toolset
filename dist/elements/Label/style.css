@@ -1,0 +1,7 @@
+:local .Label {
+  margin: 0 6px; }
+
+:local .Label--isRequired::before {
+  content: "*";
+  margin-right: 3px;
+  color: #d10202; }
